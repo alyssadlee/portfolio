@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile practice</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+ 
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-all">
+        <div class="welcome_background"></div>
+        <div class="welcome" id="home">
+            <button class="menu-button">
+                <span id="hamburger" class="material-symbols-outlined">
+                    menu
+                    </span>
+                <span id="close-icon" class="material-symbols-outlined">
+                    close
+                    </span>
+            </button>
+            <h1>Welcome to my <span>Portfolio</span></h1> 
+        </div>
+
+        <section class="intro">
+            <div class="intro-left">
+                <img class="social-icon" src="images/orange_flowers.jpeg" alt="drawing of orange and white flowers">
+            </div>
+            <div class="intro-middle">
+                <h2>Making it happen</h2>
+                <p>All about me....</p>
+            </div>
+            <div class="intro-right">
+                <img class="social-icon" src="images/orange_flowers.jpeg" alt="drawing of orange and white flowers">
+            </div>
+        </section>
+
+        <section class="about-me" id="about">
+            <img class="about-img" src="images/profile-pic.jpeg" alt="profile picture of Alyssa Lee">
+            <h1 class="about-title">Alyssa Lee</h1>
+            <h2 class="about-subtitle">UX Designer</h2>
+            <div class="about-text">
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <h1>My Work</h1> 
+            <div class="portfolio-items">
+
+                <!-- Portfolio item 1 -->
+                <figure class="portfolio-item">
+                    <img class="portfolio-image" src="images/Tribute_Page.jpg" alt="Yayoi Kusama tribute page">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project Name</h2>
+                        <p class="portfolio-desc">Short description of project</p>
+                        <a href="#" class="portfolio-link">More info</a>
+                    </figcaption>
+
+                    <!-- Portfolio modal 1 -->
+                    <div class="portfolio-modal">
+                            <button class="modal-close">
+                            <span class="material-symbols-outlined">
+                                close
+                                </span>
+                            </button>
+                        <div class="portfolio-header">
+                            <div class="portfolio-title-box">
+                                <h2 class="portfolio-title">Project Name</h2>
+                                <p class="portfolio-subtitle">Subtitle goes here</p>
+                            </div>
+                        </div> <!-- / portfolio-header -->
+                        
+                        <div class="portfolio-content">
+                            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                            <img class="portfolio-full-width" src="/images/Tribute_Page.jpg" alt="Tribute Page">
+                            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                            <img class="portfolio-pull-left" src="/images/Tribute_Page.jpg" alt="Tribute Page">
+                            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                            <img class="portfolio-pull-right" src="/images/Tribute_Page.jpg" alt="Tribute Page">
+                            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                        </div>
+                    </div>
+                    <!-- /modal -->
+                </figure>
+
+                <!-- Portfolio item 2 -->
+                <figure class="portfolio-item">
+                    <img class="portfolio-image" src="images/green_flowers.JPG" alt="drawing of green flowers">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project Name</h2>
+                        <p class="portfolio-desc">Short description of project</p>
+                        <a href="#" class="portfolio-link">More info</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Portfolio item 3 -->
+                <figure class="portfolio-item">
+                    <img class="portfolio-image" src="images/Survey_Form.jpg" alt="Survey form">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project Name</h2>
+                        <p class="portfolio-desc">Short description of project</p>
+                        <a href="#" class="portfolio-link">More info</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Portfolio item 4 -->
+                <figure class="portfolio-item">
+                    <img class="portfolio-image" src="images/Technical_Doc_Page.jpg" alt="technical documentation page">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project Name</h2>
+                        <p class="portfolio-desc">Short description of project</p>
+                        <a href="#" class="portfolio-link">More info</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Portfolio item 5 -->
+                <figure class="portfolio-item featured">
+                    <img class="portfolio-image" src="/images/Kaylene_Fam.jpg" alt="drawing of a girl sitting at a table, a boy in the middleTribute Page.">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project Name</h2>
+                        <p class="portfolio-desc">Short description of project</p>
+                        <a href="#" class="portfolio-link">More info</a>
+                    </figcaption>
+
+                    <!-- Portfolio modal 5 -->
+                    <div class="portfolio-modal">
+                        <button class="modal-close">
+                        <span class="material-symbols-outlined">
+                            close
+                            </span>
+                        </button>
+                    <div class="portfolio-header">
+                        <div class="portfolio-title-box">
+                            <h2 class="portfolio-title">Project Name</h2>
+                            <p class="portfolio-subtitle">Subtitle goes here</p>
+                        </div>
+                    </div> <!-- / portfolio-header -->
+                    
+                    <div class="portfolio-content">
+                        <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                        <img class="portfolio-full-width" src="/images/Kaylene_Fam.jpg" alt="Tribute Page">
+                        <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                        <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                        <img class="portfolio-pull-left" src="/images/Kaylene_Fam.jpg" alt="Tribute Page">
+                        <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                        <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                        <img class="portfolio-pull-right" src="/images/Kaylene_Fam.jpg" alt="Tribute Page">
+                        <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                        <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                    </div>
+                </div>
+                <!-- /modal -->
+
+                </figure>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h1>Contact me</h1>
+            <form action="">
+                <label class="name">Name:
+                    <input type="text" id="name">
+                </label>
+
+                <label class="email">Email:
+                    <input type="email" id="email">
+                </label>
+
+                <label class="message">Message:
+                    <textarea name="" id="message" cols="30" rows="10"></textarea>
+                </label>
+
+                <input type="submit" class="button form-button" value="SEND">
+            </form>
+        </section>
+
+        <footer>
+            <p>Follow me on social media</p>
+            <div class="social-icons">
+                <img class="social-icon" src="/images/instagram.png" alt="instagram">
+                <img class="social-icon" src="/images/facebook.png" alt="facebook">
+                <img class="social-icon" src="/images/linked_in.png" alt="linked-in">
+            </div>
+            <p class="copyright">2020 Alyssa Lee. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="js/nav.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>

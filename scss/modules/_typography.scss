@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+$ff-s: 'Bungee Shade', serif;
+$ff-ss: 'Montserrat', sans-serif;
+
+$fw-l: 300; 
+$fw-n: 400;
+$fw-b: 600; 
+
+@mixin serif($fs, $ls: 0em, $color: $dark-grey, $tt: uppercase, $lh: 1) {
+    font-size: $fs;
+    letter-spacing: $ls;
+    color: $color; 
+    text-transform: $tt;
+    line-height: $lh;
+    font-family: $ff-s;
+}
