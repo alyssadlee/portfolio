@@ -1,16 +1,14 @@
-const navToggle = document.querySelector('.menu-button')
-const nav = document.querySelector('nav')
-const containerAll = document.querySelector('.container-all')
+const primaryNav = document.querySelector('.primary-navigation');
+const navToggle = document.querySelector('.mobile-nav-toggle');
 
-const containerAllStyle = containerAll.style
-const docClasslist = document.body.classList
+navToggle.addEventListener('click', () => {
+    const visibility = primaryNav.getAttribute('data-visible');
 
-navToggle.addEventListener('click', _ => {
-    containerAllStyle.transition = 'transform 250ms ease-in'
-    docClasslist.toggle('nav-is-open')
-})
-
-nav.addEventListener('click', _ => {
-    containerAllStyle.transition = '0ms' 
-    docClasslist.remove('nav-is-open')
+    if (visibility === "false") {
+        primaryNav.setAttribute('data-visible', true);
+        navToggle.setAttribute('aria-expanded', true);
+    } else if (visibility === "true") {
+        primaryNav.setAttribute('data-visible', false);
+        navToggle.setAttribute('aria-expanded', false);
+    }
 })

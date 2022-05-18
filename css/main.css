@@ -1196,14 +1196,6 @@ footer .contact_me::after {
   height: 25%;
 }
 
-.menu-button {
-  position: fixed;
-  top: 5em;
-  left: 3em;
-  background: transparent;
-  border: 0;
-}
-
 .portfolio-header {
   position: fixed;
   display: -webkit-box;
@@ -1220,6 +1212,24 @@ footer .contact_me::after {
           justify-content: space-between;
 }
 
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 35em) {
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: #476ECB;
+    border: 0;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
 .logo {
   display: inline;
   float: left;
@@ -1232,7 +1242,7 @@ footer .contact_me::after {
   font-weight: 600;
 }
 
-nav ul {
+.primary-navigation {
   margin: 0 2em;
   padding: 0;
   list-style: none;
@@ -1253,10 +1263,11 @@ nav ul {
 }
 
 @media (max-width: 35em) {
-  nav ul {
+  .primary-navigation {
     position: fixed;
+    z-index: 1000;
     inset: 0 0 30%;
-    background: #FDFAF3;
+    --gap: 2rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1264,7 +1275,21 @@ nav ul {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 10rem 2em;
+    padding: Min(30vh, 10rem) 2em;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .primary-navigation [data-visible="true"] {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
+  .primary-navigation {
+    background-color: white;
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
   }
 }
 
