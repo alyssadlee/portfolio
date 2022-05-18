@@ -1206,13 +1206,18 @@ footer .contact_me::after {
 
 .portfolio-header {
   position: fixed;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
   border-bottom: #422A2A 1px solid;
   padding: 1rem 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .logo {
@@ -1245,6 +1250,22 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 35em) {
+  nav ul {
+    position: fixed;
+    inset: 0 0 30%;
+    background: #FDFAF3;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 10rem 2em;
+  }
 }
 
 nav li {

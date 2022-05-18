@@ -8,13 +8,14 @@
 
 .portfolio-header {
     position: fixed; 
-    display: inline-block;
+    display: flex;
     top: 0;
     left: 0; 
     right: 0; 
     z-index: 9999; 
     border-bottom: $dark 1px solid;
     padding: 1rem 0;
+    justify-content: space-between;
 }
 
 .logo {
@@ -33,7 +34,16 @@ nav ul {
     flex-direction: row; 
     justify-content: right; 
     align-items: center;
-    
+
+    background: hsl(42, 71%, 97% / 0.85);
+    @media (max-width: 35em) {
+        position: fixed;
+        inset: 0 0 30%; 
+        flex-direction: column;
+        align-items: flex-start;
+        padding: min(30vh, 10rem) 2em;
+    }
+
 }
 
 nav li {
