@@ -1,4 +1,4 @@
-.portfolio {
+.case-studies {
     text-align: center;
     background-color: $dark;
     padding: 5em 0; 
@@ -8,20 +8,20 @@
     }
 }
 
-.portfolio-items {
+.casestudy-items {
     display: flex;
     flex-direction: column;
     @include container ($max-width: 60rem); 
 }
 
-.portfolio-item {
+.casestudy-item {
     position: relative;
     overflow: hidden;
-    flex: 1 1 auto; 
+    flex: 0 1 auto; 
     justify-content: space-evenly;
 
 
-    .portfolio-image {
+    .casestudy-image {
         display: block;
         object-fit: cover; 
         width: 100%;
@@ -49,12 +49,12 @@
     }
 }
 
-.portfolio-title {
-    @include serif ($fs: 1.5em);
+.casestudy-title {
+    @include serif ($fs: 3em, $color: $cream);
     margin-bottom: auto;
 }
 
-.portfolio-desc {
+.casestudy-desc {
     // display: none;
     
     @include mq {
@@ -62,7 +62,7 @@
     }
 }
 
-.portfolio-link {
+.casestudy-link {
     color: $cream;
     font-weight: $fw-b;
     font-size: 1.1rem; 
@@ -81,58 +81,58 @@
 }
 
 @supports (display:grid) {
-    .portfolio-items {
+    .casestudy-items {
         display: grid;
         grid-gap: 1em; 
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         
 
         @include mq {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
-    .portfolio-item.featured {
+    .casestudy-item.featured {
         grid-column: 1 / span 2; 
         grid-row: 1 / span 2;
     } 
 
     .featured {
-        .portfolio-title {
+        .casestudy-title {
             font-size: 3em; 
         }  
 
-        .portfolio-desc {
+        .casestudy-desc {
             display: block;
         }
     }
 }
 
-.portfolio-header {
+.casestudy-header {
     text-align: left; 
     padding: 5em 0; 
     margin-bottom: 2em; 
 }
 
-.portfolio-header:nth-of-type(1) {
+.casestudy-header:nth-of-type(1) {
     background-image: url(/images/Tribute_Page.jpg);
     background-size: cover; 
     background-position: center;
 }
 
-.portfolio-header:nth-of-type(5) {
+.casestudy-header:nth-of-type(5) {
     background-image: url(/images/Kaylene_Fam.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.portfolio-title-box {
+.casestudy-title-box {
     background: rgba($cream, 0.75); 
     padding: 3em 3em 3em 1em; 
     color: $dark; 
     width: 70%; 
 
-    .portfolio-title {
+    .casestudy-title {
     font-size: 2.5em; 
     color: $dark;
     display: inline-block; 
@@ -148,18 +148,18 @@
     }
 }
 
-.portfolio-subtitle {
+.casestudy-subtitle {
     font-size: 1rem;
 }
 
-.portfolio-content {
+.casestudy-content {
     text-align: left;
     width: 85%;
     margin: 0 auto; 
     padding-bottom: 2em;
 }
 
-.portfolio-full-width {
+.casestudy-full-width {
     width: 100vw;
     max-width: initial;
     margin: 1em calc(50% - 50vw);
@@ -168,25 +168,25 @@
 }
 
 @include mq {
-    .portfolio-pull-left {
+    .casestudy-pull-left {
         width: 65%;
         float: left; 
         margin-right: 1em; 
     }
 
-    .portfolio-pull-right {
+    .casestudy-pull-right {
         width: 65%;
         float: right; 
         margin-left: 1em; 
     }
 }
 
-@keyframes modalIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
+// @keyframes modalIn {
+//     0% { opacity: 0; }
+//     100% { opacity: 1; }
+// }
 
-@keyframes modalOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
+// @keyframes modalOut {
+//     0% { opacity: 1; }
+//     100% { opacity: 0; }
+// }

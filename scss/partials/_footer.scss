@@ -1,7 +1,33 @@
 footer {
-    background: $dark-grey;
+    background: $grey-beige;
     padding: 5em 0;
     text-align: center;
+
+    .contact_me {
+        @include serif($fs: 2.8em);
+        text-decoration: none;
+        background-image: linear-gradient($dark 50%, $dark 50%);
+        background-size: 10000px 2px;
+        color: $dark;
+        background-repeat: no-repeat;
+        background-position: 0 1em;
+        background-position: -10000px 1em;
+            
+            &:hover {
+                background-position: 0 1em;
+                transition: background-position 2s ease-in-out;
+            }
+
+            &::after {
+                content: ""; 
+                display: block; 
+                height: 1.5px; 
+                background: rgba($cream, 0.8);
+                margin-bottom: 1em; 
+                width: 50%; 
+                margin: 1em auto; 
+            }
+        }
 
 }
 
@@ -10,21 +36,15 @@ footer {
     display: flex; 
     justify-content: space-between;
     margin: 2em auto 4em; 
+
 }
 
 .social-icon {
     width: 25%;
     height: 25%; 
+
 }
 
 .copyright {
-    &::before {
-        content: ""; 
-        display: block; 
-        height: 1px; 
-        background: rgba($light-orange, 0.8);
-        margin-bottom: 4em; 
-        width: 25%; 
-        margin: 3em auto; 
-    }
+    
 }

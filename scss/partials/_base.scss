@@ -1,8 +1,8 @@
 body {
-    color: $grey; 
+    color: $dark; 
     font-family: $ff-ss;
     line-height: 1.6;
-    background: $white; 
+    background: $cream; 
     font-size: .875rem; 
     overflow-x: hidden; 
 
@@ -21,7 +21,8 @@ h1, h2, p {
 }
 
 h1 {
-    color: $light-orange; 
+    @include serif($fs: 2rem);
+    color: $dark; 
     line-height: 1; 
     font-size: 3.125rem;
 

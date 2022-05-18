@@ -1,40 +1,74 @@
-.intro {
-    display: flex;
-    color: $white;
+// .intro_background {
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100vh; 
+//     background-image: url(/images/intro_background.jpg);
+//     background-size: cover;
+//     background-position: center;
+// }
 
-    h2 {
-        color: $white;
+// .intro {
 
-        &::after {
-            content: "";
-            display: block;
-            width: 20%;
-            height: 1px;
-            background: $light-orange;
-            margin: 1em auto 0;  
-        }
-    }
+//     h2 {
+//         color: $dark;
 
-    @supports (display: grid) {
-        display: grid;  
-        grid-template-columns: minmax(2em, 1fr) minmax(auto, 30em) minmax(2em, 1fr);
-    }
-}
+//         &::after {
+//             content: "";
+//             display: block;
+//             width: 20%;
+//             height: 1px;
+//             background: $royal-blue;
+//             margin: 1em auto 0;  
+//         }
+//     }
 
-.intro-middle {
-    background: $dark-grey;
-    color: $white;
-    padding: 2.5em 3vw;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+//     @supports (display: grid) {
+//         display: grid;  
+//         grid-template-columns: minmax(2em, 1fr) minmax(auto, 30em) minmax(2em, 1fr);
+//     }
+// }
+
+.intro_title {
+    background: transparent;
+    color: $dark;
+    padding: 0 3vw;
+    text-align: left;
     justify-content: center;
-}
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    background-image: url(/images/intro_background.jpg);
+    // min-height: 1000px;
+    background-size: cover;
+    background-position: center;
+    // background-attachment: fixed;
 
-.intro-left img,
-.intro-right img {
-    object-fit: cover;
-    min-height: 100%;
-    min-width: 100%;
-    display: block;   
+    h1 {
+        @include serif($fs:2.5em, $lh:2.5); 
+        font-weight: $fw-m;
+        padding: 5em 3vw;
+    }
+
+    a {
+        color: $dark;
+        text-decoration: none;
+        background-image: linear-gradient($dark 50%, $dark 50%);
+        background-size: 10000px 2px;
+        color: $dark;
+        background-repeat: no-repeat;
+        background-position: 0 1em;
+        background-position: -10000px 1em;
+            
+            &:hover {
+                background-position: 0 1em;
+                transition: background-position 2s ease-in-out;
+            }
+        }
 }
+    
+    
+
+
