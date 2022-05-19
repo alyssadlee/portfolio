@@ -372,6 +372,13 @@ h2 {
   background-attachment: fixed;
 }
 
+@media (min-width: 50em) {
+  .welcome_background {
+    background-size: cover;
+    background-position-y: -25rem;
+  }
+}
+
 .welcome {
   position: absolute;
   top: 0;
@@ -400,7 +407,7 @@ h2 {
 
 @media (min-width: 50em) {
   .welcome h1 {
-    font-size: 2.5vw;
+    font-size: 5vw;
   }
 }
 
@@ -425,7 +432,7 @@ h2 {
 
 @media (min-width: 50em) {
   .welcome h1 span {
-    font-size: 7vw;
+    font-size: 2.5vw;
   }
 }
 
@@ -451,7 +458,6 @@ h2 {
   height: 100vh;
   background-image: url(../images/intro_background.jpg);
   background-size: cover;
-  background-position: center;
 }
 
 .intro_title h1 {
@@ -463,6 +469,12 @@ h2 {
   font-weight: 400;
   font-weight: 400;
   padding: 5em 3vw;
+}
+
+@media (min-width: 50em) {
+  .intro_title h1 {
+    padding: 6em;
+  }
 }
 
 .intro_title a {

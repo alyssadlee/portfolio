@@ -9,6 +9,12 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    
+
+    @include mq {
+        background-size: cover;
+        background-position-y: -25rem;
+    }
 }
 
 .welcome {
@@ -30,7 +36,7 @@
         text-align: center;
 
         @include mq {
-            font-size: 2.5vw; 
+            font-size: 5vw; 
         }
 
         span {
@@ -47,7 +53,7 @@
             }
 
             @include mq {
-                font-size: 7vw; 
+                font-size: 2.5vw; 
             }
         }
 
