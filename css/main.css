@@ -323,7 +323,8 @@ img {
 
 h1, h2, p {
   margin-top: 0;
-  margin-bottom: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1 {
@@ -444,16 +445,13 @@ h2 {
 }
 
 .intro_title {
-  background: transparent;
   color: #422A2A;
-  padding: 0 3vw;
   text-align: left;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100vh;
   background-image: url(../images/intro_background.jpg);
   background-size: cover;
@@ -465,21 +463,19 @@ h2 {
   }
 }
 
-.intro_title h1 {
+.intro_title h2 {
   font-size: 2.5em;
   letter-spacing: 0em;
   color: #422A2A;
-  line-height: 2.5;
+  line-height: 1.5;
   font-family: "Bitter", serif;
   font-weight: 400;
   font-weight: 400;
-  padding: 5em 3vw;
-}
-
-@media (min-width: 50em) {
-  .intro_title h1 {
-    padding: 6em;
-  }
+  padding-inline: Max(20%, 2.5em);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 .intro_title a {

@@ -9,36 +9,12 @@
 //     background-position: center;
 // }
 
-// .intro {
-
-//     h2 {
-//         color: $dark;
-
-//         &::after {
-//             content: "";
-//             display: block;
-//             width: 20%;
-//             height: 1px;
-//             background: $royal-blue;
-//             margin: 1em auto 0;  
-//         }
-//     }
-
-//     @supports (display: grid) {
-//         display: grid;  
-//         grid-template-columns: minmax(2em, 1fr) minmax(auto, 30em) minmax(2em, 1fr);
-//     }
-// }
-
 .intro_title {
-    background: transparent;
     color: $dark;
-    padding: 0 3vw;
     text-align: left;
     justify-content: center;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100vh; 
     background-image: url(../images/intro_background.jpg);
     background-size: cover;
@@ -48,14 +24,14 @@
     }
     
 
-    h1 {
-        @include serif($fs:2.5em, $lh:2.5); 
+    h2 {
+        @include serif($fs:2.5em, $lh:1.5); 
         font-weight: $fw-m;
-        padding: 5em 3vw;
-
-        @include mq {
-            padding: 6em;
-        }
+        padding-inline: Max(20%, 2.5em);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; 
     }
 
     a {
