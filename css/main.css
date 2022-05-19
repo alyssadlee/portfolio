@@ -374,7 +374,6 @@ h2 {
 @media (min-width: 50em) {
   .welcome_background {
     background-size: cover;
-    background-position-y: -20rem;
   }
 }
 
