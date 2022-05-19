@@ -1239,6 +1239,7 @@ footer .contact_me::after {
     position: absolute;
     z-index: 9999;
     background: #476ECB;
+    border-radius: 0.25em;
     border: 0;
     width: 2rem;
     aspect-ratio: 1;
@@ -1279,6 +1280,14 @@ footer .contact_me::after {
           align-items: center;
 }
 
+@supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
+  .primary-navigation {
+    background-color: white;
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+  }
+}
+
 @media (max-width: 35em) {
   .primary-navigation {
     position: fixed;
@@ -1293,8 +1302,8 @@ footer .contact_me::after {
         -ms-flex-align: start;
             align-items: flex-start;
     padding: Min(30vh, 10rem) 2em;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
   }
   .primary-navigation [data-visible="true"] {
     -webkit-transform: translateX(0%);

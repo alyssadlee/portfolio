@@ -13,11 +13,13 @@
 .mobile-nav-toggle {
     display: none; 
 
+
     @media (max-width: 35em) {
         display: block; 
         position: absolute;
         z-index: 9999;
         background: $blue; 
+        border-radius: 0.25em;
         border: 0;
         width: 2rem; 
         aspect-ratio: 1;
@@ -43,6 +45,11 @@
     justify-content: right; 
     align-items: center;
 
+    @supports (backdrop-filter: blur(1rem)) {
+        background-color: hsl(42, 71%, 97% / 0.1);
+        backdrop-filter: blur(1rem);
+    }
+
     @media (max-width: 35em) {
         position: fixed;
         z-index: 1000;
@@ -52,17 +59,14 @@
         align-items: flex-start;         
         padding: Min(30vh, 10rem) 2em;
 
-        transform: translateX(100%);
+        transform: translateX(120%);
 
         [data-visible="true"] {
             transform: translateX(0%)
         }
     }
 
-    // @supports (backdrop-filter: blur(1rem)) {
-    //     background-color: hsl(42, 71%, 97% / 0.1);
-    //     backdrop-filter: blur(1rem);
-    // }
+    
 
 }
 
