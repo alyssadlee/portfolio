@@ -43,6 +43,11 @@
     background-image: url(../images/intro_background.jpg);
     background-size: cover;
 
+    @include mq {
+      background-position-y: -5rem;  
+    }
+    
+
     h1 {
         @include serif($fs:2.5em, $lh:2.5); 
         font-weight: $fw-m;

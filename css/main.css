@@ -460,6 +460,12 @@ h2 {
   background-size: cover;
 }
 
+@media (min-width: 50em) {
+  .intro_title {
+    background-position-y: -5rem;
+  }
+}
+
 .intro_title h1 {
   font-size: 2.5em;
   letter-spacing: 0em;
