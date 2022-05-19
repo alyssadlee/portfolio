@@ -5,15 +5,12 @@
     height: 100vh; 
     background-image: url(../images/welcome_background.jpg);
     background-size: cover;
-    
-    @supports (background-attachment: fixed) {
-        min-height: 1000px;
-        background-attachment: fixed;
-    }
 
     @include mq {
         background-size: cover;
         background-position-y: -20rem;
+        min-height: 1000px;
+        background-attachment: fixed;
     }
 }
 

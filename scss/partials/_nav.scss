@@ -59,15 +59,13 @@
         align-items: flex-start;         
         padding: Min(30vh, 10rem) 2em;
 
-        transform: translateX(120%);
+        transform: translateX(120%); 
 
         [data-visible="true"] {
-            transform: translateX(0%)
+        transform: translateX(0%)
         }
     }
-
     
-
 }
 
 nav li {
