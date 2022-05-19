@@ -59,10 +59,10 @@
         }
     }
 
-    @supports (backdrop-filter: blur(1rem)) {
-        background-color: hsl(42, 71%, 97% / 0.1);
-        backdrop-filter: blur(1rem);
-    }
+    // @supports (backdrop-filter: blur(1rem)) {
+    //     background-color: hsl(42, 71%, 97% / 0.1);
+    //     backdrop-filter: blur(1rem);
+    // }
 
 }
 
@@ -83,4 +83,27 @@ nav a:hover {
     color: $cream;
 }
 
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
 
+    &:focus,:active {
+        clip: auto !important;
+        -webkit-clip-path: none !important;
+        clip-path: none !important;
+        height: auto !important;
+        margin: auto !important;
+        overflow: visible !important;
+        width: auto !important;
+        white-space: normal !important;
+    }
+}
