@@ -365,14 +365,13 @@ h2 {
   top: 0;
   left: 0;
   height: 100vh;
-  background-image: url(../images/welcome_background.jpg);
+  background: url(../images/welcome_background.jpg) bottom left no-repeat fixed;
   background-size: cover;
 }
 
 @media (min-width: 50em) {
   .welcome_background {
     background-size: cover;
-    background-position-y: -20rem;
     min-height: 1000px;
     background-attachment: fixed;
   }
