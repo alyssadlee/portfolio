@@ -365,8 +365,16 @@ h2 {
   top: 0;
   left: 0;
   height: 100vh;
-  background: url(../images/welcome_background.jpg) bottom left no-repeat fixed;
+  background-image: url(../images/welcome_background.jpg);
   background-size: cover;
+}
+
+@media (min-width: 50em) {
+  .welcome_background {
+    background-size: cover;
+    min-height: 1000px;
+    background-attachment: fixed;
+  }
 }
 
 .welcome {
@@ -449,12 +457,6 @@ h2 {
   background-size: cover;
 }
 
-@media (min-width: 50em) {
-  .intro_title {
-    background-position-y: -5rem;
-  }
-}
-
 .intro_title h2 {
   font-size: 2.5em;
   letter-spacing: 0em;
@@ -466,8 +468,8 @@ h2 {
   padding-inline: Max(20%, 2.5em);
   top: 0;
   left: 0;
-  -webkit-padding-before: 2em;
-          padding-block-start: 2em;
+  -webkit-padding-before: 3em;
+          padding-block-start: 3em;
 }
 
 .intro_title a {
