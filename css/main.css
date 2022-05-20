@@ -366,7 +366,7 @@ h2 {
   left: 0;
   height: 100vh;
   background: url(../images/welcome_background.jpg) bottom left no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 @media (min-width: 50em) {
