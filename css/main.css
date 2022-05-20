@@ -1302,10 +1302,11 @@ footer .contact_me::after {
     -webkit-transform: translateX(120%);
             transform: translateX(120%);
   }
-  .primary-navigation [data-visible="true"] {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
+}
+
+.primary-navigation[data-visible="true"] {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 nav li {

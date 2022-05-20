@@ -13,7 +13,6 @@
 .mobile-nav-toggle {
     display: none; 
 
-
     @media (max-width: 35em) {
         display: block; 
         position: absolute;
@@ -60,12 +59,12 @@
         padding: Min(30vh, 10rem) 2em;
 
         transform: translateX(120%); 
-
-        [data-visible="true"] {
-        transform: translateX(0%)
-        }
     }
     
+}
+
+.primary-navigation[data-visible="true"] {
+    transform: translateX(0%)
 }
 
 nav li {
