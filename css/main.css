@@ -365,8 +365,8 @@ h2 {
   top: 0;
   left: 0;
   height: 100vh;
-  background-image: url(../images/welcome_background.jpg);
-  background-size: cover;
+  background: url(../images/welcome_background.jpg) bottom left no-repeat;
+  background-size: contain;
 }
 
 @media (min-width: 50em) {
@@ -457,6 +457,17 @@ h2 {
   background-size: cover;
 }
 
+@supports (display: grid) {
+  .intro_title {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [port-start] minmax(3em, 1fr) [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr);
+        grid-template-columns: [port-start] minmax(3em, 1fr) [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr);
+    -ms-grid-rows: [port-start] minmax(3em, 1fr) minmax 3em, 1fr [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr) 3em, 1fr;
+        grid-template-rows: [port-start] minmax(3em, 1fr) minmax 3em, 1fr [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr) 3em, 1fr;
+  }
+}
+
 .intro_title h2 {
   font-size: 2.5em;
   letter-spacing: 0em;
@@ -465,11 +476,12 @@ h2 {
   font-family: "Bitter", serif;
   font-weight: 400;
   font-weight: 400;
-  padding-inline: Max(20%, 2.5em);
   top: 0;
   left: 0;
-  -webkit-padding-before: 3em;
-          padding-block-start: 3em;
+  grid-column: text-start / text-end;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3 / 5;
 }
 
 .intro_title a {
