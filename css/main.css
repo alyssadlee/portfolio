@@ -370,10 +370,12 @@ h2 {
 }
 
 @media (min-width: 50em) {
-  .welcome_background {
-    background-size: cover;
-    min-height: 1000px;
-    background-attachment: fixed;
+  @supports (background-attachment: fixed) {
+    .welcome_background {
+      background-size: cover;
+      min-height: 1000px;
+      background-attachment: fixed;
+    }
   }
 }
 

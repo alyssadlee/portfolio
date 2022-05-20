@@ -7,9 +7,11 @@
     background-size: cover;
 
     @include mq {
+        @supports (background-attachment: fixed) {
         background-size: cover;
         min-height: 1000px;
         background-attachment: fixed;
+        }
     }
 }
 
