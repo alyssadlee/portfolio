@@ -6,11 +6,11 @@
     background: url(../images/welcome_background.jpg) bottom left no-repeat fixed;
     background-size: cover;
 
-    @include mq {
-        background-size: cover;
-        min-height: 1000px;
-        background-attachment: fixed;
-    }
+    // @include mq {
+    //     background-size: cover;
+    //     min-height: 1000px;
+    //     background-attachment: fixed;
+    // }
 }
 
 .welcome {
