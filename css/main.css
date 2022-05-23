@@ -302,6 +302,21 @@ template {
   display: none;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  width: calc(min(100% - 1rem, 80rem));
+  margin-inline: auto;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   color: #422A2A;
   font-family: "Jost", sans-serif;
@@ -309,6 +324,16 @@ body {
   background: #FDFAF3;
   font-size: .875rem;
   overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (min-width: 50em) {
@@ -319,12 +344,6 @@ body {
 
 img {
   max-width: 100%;
-}
-
-h1, h2, p {
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 h1 {
@@ -385,7 +404,6 @@ h2 {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1219,43 +1237,40 @@ footer .contact_me::after {
 
 .portfolio-header {
   position: fixed;
+  top: 0;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
   border-bottom: #422A2A 1px solid;
-  padding: 1rem 0;
+  padding-block: 1rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #FDFAF3;
 }
 
-.mobile-nav-toggle {
+button[aria-controls="primary-navigation"] {
   display: none;
+  position: fixed;
+  right: 2em;
+  z-index: 2;
+  background: #476ECB;
+  border: 0;
+  border-radius: 0.25em;
+  width: 2rem;
+  aspect-ratio: 1;
 }
 
 @media (max-width: 35em) {
-  .mobile-nav-toggle {
-    display: block;
-    position: absolute;
-    z-index: 9999;
-    background: #476ECB;
-    border-radius: 0.25em;
-    border: 0;
-    width: 2rem;
-    aspect-ratio: 1;
-    top: 2rem;
-    right: 2rem;
+  button[aria-controls="primary-navigation"] {
+    display: inline-block;
   }
 }
 
 .logo {
   display: inline;
-  float: left;
-  margin: 0 0 0 1rem;
+  margin-inline: 1.5rem 0;
   font-size: 1.5em;
   letter-spacing: 0em;
   color: #422A2A;
@@ -1264,78 +1279,88 @@ footer .contact_me::after {
   font-weight: 600;
 }
 
-.primary-navigation {
-  margin: 0 2em;
-  padding: 0;
-  list-style: none;
+#primary-navigation {
+  position: fixed;
+  z-index: 1;
+  inset: 0 0 30%;
+  background-color: #FDFAF3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: var(--gap, 1rem);
-  -webkit-box-orient: horizontal;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  list-style: none;
+  padding-inline: em;
+  padding-block: Min(30vh, 10rem);
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+  -webkit-transition: -webkit-transform 350ms ease-out;
+  transition: -webkit-transform 350ms ease-out;
+  transition: transform 350ms ease-out;
+  transition: transform 350ms ease-out, -webkit-transform 350ms ease-out;
 }
 
-@supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
-  .primary-navigation {
-    background-color: white;
-    -webkit-backdrop-filter: blur(1rem);
-            backdrop-filter: blur(1rem);
-  }
-}
-
-@media (max-width: 35em) {
-  .primary-navigation {
-    position: fixed;
-    z-index: 1000;
-    inset: 0 0 30%;
-    --gap: 2rem;
-    -webkit-box-orient: vertical;
+@media (min-width: 35em) {
+  #primary-navigation {
+    position: initial;
+    margin-inline: 1.5rem;
+    padding: 1em 0 0 0;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding: Min(30vh, 10rem) 2em;
-    -webkit-transform: translateX(120%);
-            transform: translateX(120%);
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: none !important;
+            transform: none !important;
   }
 }
 
-.primary-navigation[data-visible="true"] {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+#primary-navigation[data-visible="true"] {
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
 }
 
 nav li {
   text-align: center;
-}
-
-nav li:hover {
-  background: #422A2A;
+  color: #422A2A;
+  position: relative;
 }
 
 nav a {
   font-size: 1.25em;
   letter-spacing: 0em;
   color: #422A2A;
-  line-height: 1;
+  line-height: 1.5;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   text-decoration: none;
 }
 
-nav a:hover {
-  color: #FDFAF3;
+nav a::after {
+  content: "";
+  position: absolute;
+  background-color: #422A2A;
+  height: 2px;
+  width: 0%;
+  left: 0;
+  bottom: -2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 .sr-only {

@@ -1,14 +1,24 @@
-const primaryNav = document.querySelector('.primary-navigation');
-const navToggle = document.querySelector('.mobile-nav-toggle');
+// const primaryNav = document.querySelector('.primary-navigation');
+// const navToggle = document.querySelector('.mobile-nav-toggle');
 
-navToggle.addEventListener('click', () => {
-    const visibility = primaryNav.getAttribute('data-visible');
+// navToggle.addEventListener('click', () => {
+//     const visibility = primaryNav.getAttribute('data-visible');
 
-    if (visibility === "false") {
-        primaryNav.setAttribute('data-visible', true);
-        navToggle.setAttribute('aria-expanded', true);
-    } else if (visibility === "true") {
-        primaryNav.setAttribute('data-visible', false);
-        navToggle.setAttribute('aria-expanded', false);
-    }
+//     if (visibility === "false") {
+//         primaryNav.setAttribute('data-visible', true);
+//         navToggle.setAttribute('aria-expanded', true);
+//     } else if (visibility === "true") {
+//         primaryNav.setAttribute('data-visible', false);
+//         navToggle.setAttribute('aria-expanded', false);
+//     }
+// })
+
+const toggleButton = document.getElementsByClassName("[aria-controls='primary-navigation']")[0];
+const primaryNav = document.getElementsByClassName('#primary-navigation')[0];
+
+toggleButton.addEventListener('click', () => {
+    primaryNav.classList.toggle('active') 
 })
+
+
+

@@ -1,87 +1,93 @@
 .portfolio-header {
-    position: fixed; 
-    display: flex;
+    position: fixed;
     top: 0;
-    left: 0; 
-    right: 0; 
-    z-index: 9999; 
+    
+    z-index: 1;
+    display: flex;
     border-bottom: $dark 1px solid;
-    padding: 1rem 0;
+    padding-block: 1rem;
     justify-content: space-between;
+    background-color: $cream;
 }
 
-.mobile-nav-toggle {
+button[aria-controls="primary-navigation"] {
     display: none; 
+    position: fixed;
+    right: 2em;
+    z-index: 2;
+    background: $blue; 
+    border: 0;
+    border-radius: 0.25em;
+    width: 2rem;
+    aspect-ratio: 1;
 
     @media (max-width: 35em) {
-        display: block; 
-        position: absolute;
-        z-index: 9999;
-        background: $blue; 
-        border-radius: 0.25em;
-        border: 0;
-        width: 2rem; 
-        aspect-ratio: 1;
-        top: 2rem;
-        right: 2rem;
+        display: inline-block; 
     }
 }
 
 .logo {
     display: inline;
-    float: left;
-    margin: 0 0 0 1rem;
+    margin-inline: 1.5rem 0;
     @include sans-serif($fs:1.5em, $fw:$fw-b);
 }
 
-.primary-navigation {
-    margin: 0 2em;
-    padding: 0; 
-    list-style: none; 
-    display: flex; 
-    gap: var(--gap, 1rem);
-    flex-direction: row; 
-    justify-content: right; 
-    align-items: center;
+#primary-navigation {
+    position: fixed;
+    z-index: 1;
+    inset: 0 0 30%; 
+    background-color: $cream;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column; 
+    align-items: flex-start;
+    list-style: none;
+    padding-inline: em; 
+    padding-block: Min(30vh, 10rem);
 
-    @supports (backdrop-filter: blur(1rem)) {
-        background-color: hsl(42, 71%, 97% / 0.1);
-        backdrop-filter: blur(1rem);
-    }
+    transform: translateX(120%); 
+    transition: transform 350ms ease-out;
 
-    @media (max-width: 35em) {
-        position: fixed;
-        z-index: 1000;
-        inset: 0 0 30%; 
-        --gap: 2rem;
-        flex-direction: column;
-        align-items: flex-start;         
-        padding: Min(30vh, 10rem) 2em;
-
-        transform: translateX(120%); 
+    @media (min-width: 35em) {
+        position: initial;
+        margin-inline: 1.5rem; 
+        padding: 1em 0 0 0; 
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        transform: none !important;
     }
     
 }
 
-.primary-navigation[data-visible="true"] {
-    transform: translateX(0%)
+#primary-navigation[data-visible="true"] {
+    transform: translateX(20%)
 }
 
 nav li {
     text-align: center;
-}
-
-nav li:hover {
-    background: $dark;
+    color: $dark;
+    position: relative;
 }
 
 nav a {
-    @include sans-serif($fs:1.25em);
+    @include sans-serif($fs:1.25em, $lh: 1.5);
     text-decoration: none;
 }
 
-nav a:hover {
-    color: $cream;
+nav a::after {
+    content: "";
+    position: absolute; 
+    background-color: $dark;
+    height: 2px; 
+    width: 0%; 
+    left: 0; 
+    bottom: -2px;  
+    transition: 0.3s; 
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .sr-only {
