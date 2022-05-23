@@ -16,6 +16,25 @@ navToggle.addEventListener("click", () => {
 });
 
 
+function UseClickOutside(domRef, _cb, event, ...truthyChecks) {
+  // Make sure that the menu is Open before running the rest of the function
+      if (!truthyChecks.every(Boolean)) {
+        return;
+      }
+  // check the click target
+        const visibility = event.target;
+  
+  // if the click target is not a child of the #primary-navigation, then we run the Callback
+        if (!primaryNav.contains(target)) {
+          _cb();
+          return;
+        }
+        return;
+      }
+  
+document.addEventListener('mousedown', (event) => UseClickOutside('#primary-navigation', toggleMenu, event, primaryNav.getAttribute("data-visible") ), true);
+
+
 
 
 
