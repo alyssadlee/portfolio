@@ -1284,6 +1284,9 @@ button[aria-controls="primary-navigation"] {
   z-index: 1;
   inset: 0 0 30%;
   background-color: #FDFAF3;
+  -webkit-box-shadow: 1em 0.2em 1em 1em #CFDAE9;
+          box-shadow: 1em 0.2em 1em 1em #CFDAE9;
+  border-radius: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

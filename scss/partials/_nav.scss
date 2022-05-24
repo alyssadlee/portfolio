@@ -37,6 +37,8 @@ button[aria-controls="primary-navigation"] {
     z-index: 1;
     inset: 0 0 30%; 
     background-color: $cream;
+    box-shadow: 1em 0.2em 1em 1em $cloud-blue;
+    border-radius: 0.5em;
     display: flex;
     gap: 2rem;
     flex-direction: column; 
