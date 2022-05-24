@@ -14,7 +14,11 @@ function toggleMenu() {
   if (visibility === "false") {
     primaryNav.setAttribute("data-visible", true);
     navToggle.setAttribute("aria-expanded", true);
-    return
+    return;
+  } else if (visibility === "true") {
+    primaryNav.setAttribute("data-visible", false);
+    navToggle.setAttribute("data-visible", false);
+    return;
   }
 
   primaryNav.setAttribute("data-visible", false);
@@ -42,6 +46,7 @@ function UseClickOutside() {
           toggleMenu();
           return;
         }
+
         return;
       }
   
