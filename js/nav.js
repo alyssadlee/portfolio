@@ -4,7 +4,7 @@ const navToggle = document.querySelector(
 );
 
 function toggleMenu() {
-  const visibility = primaryNav.getAttribute('data-visible');
+  const visibility = primaryNav.getAttribute("data-visible");
 
   if (!visibility) {
     console.warn("Primary nav data attribute : data-visible not found");
@@ -20,39 +20,39 @@ function toggleMenu() {
     navToggle.setAttribute("data-visible", false);
     return;
   }
+}
 
-  primaryNav.setAttribute("data-visible", false);
-  navToggle.setAttribute("data-visible", false);
+function UseClickOutside(evt) {
+  const primaryNavIsVisible =
+    primaryNav.getAttribute("data-visible") === "true";
+  // Make sure that the menu is Open before running the rest of the function
+  if (!primaryNavIsVisible) {
+    return;
+  }
+  // check the click target
+  const target = evt.target;
+  const targetClassContainsNavLink = [...target.classList].find(
+    (className) => className === "navigation_link"
+  );
+
+  const nav = document.querySelector(".primary-nav");
+  // if the click target is not a child of the Nav, then we run the Callback
+  if (!nav.contains(target) || targetClassContainsNavLink) {
+    toggleMenu();
+    return;
+  }
+
   return;
 }
 
-function UseClickOutside() {
-  const primaryNavIsVisible = primaryNav.getAttribute("data-visible") === "true";
-  // Make sure that the menu is Open before running the rest of the function
-      if (!primaryNavIsVisible) {
-        return;
-      }
-  // check the click target
-  const target = event.target;
-  
-  // if the click target is not a child of the #primary-navigation, then we run the Callback
-        if (!primaryNav.contains(target)) {
-          toggleMenu();
-          return;
-        }
+document.addEventListener("mousedown", (evt) => UseClickOutside(evt), true);
 
-        const targetClassContainsNavLink = [...target.classList].find((className) => className === "navigation_link");
-        if (targetClassContainsNavLink) {
-          toggleMenu();
-          return;
-        }
+function skipToMain() {
+  const container = document.querySelector("main");
 
-        return;
-      }
-  
-document.addEventListener('mousedown', UseClickOutside, true);
-
-
-
-
-
+  if (container) {
+    container.tabIndex = -1;
+    container.focus();
+    setTimeout(() => container.removeAttribute("tabindex"), 1000);
+  }
+}
