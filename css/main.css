@@ -302,10 +302,95 @@ template {
   display: none;
 }
 
-* {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+*:focus,
+*:focus-visible {
+  outline: 0.25rem groove var(--clr-primary-400);
+  outline-offset: 0.25rem;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
   margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .container {
@@ -313,16 +398,12 @@ template {
   margin-inline: auto;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   color: #422A2A;
   font-family: "Jost", sans-serif;
   line-height: 1.6;
   background: #FDFAF3;
-  font-size: .875rem;
+  font-size: 0.875rem;
   overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -524,7 +605,6 @@ h2 {
 
 .case-studies {
   text-align: center;
-  background-color: #422A2A;
   padding: 5em 0;
 }
 
@@ -1331,7 +1411,8 @@ button[aria-controls="primary-navigation"] {
   }
 }
 
-#primary-navigation[data-visible="true"] {
+#primary-navigation[data-visible="true"],
+#primary-navigation:focus-within {
   -webkit-transform: translateX(20%);
           transform: translateX(20%);
 }
@@ -1385,7 +1466,8 @@ nav a:hover::after {
   /* 3 */
 }
 
-.sr-only:focus, .sr-only :active {
+.sr-only:focus,
+.sr-only :active {
   clip: auto !important;
   -webkit-clip-path: none !important;
   clip-path: none !important;
@@ -1394,4 +1476,19 @@ nav a:hover::after {
   overflow: visible !important;
   width: auto !important;
   white-space: normal !important;
+}
+
+.skip-link {
+  position: fixed;
+  -webkit-transform: translateY(-400%);
+          transform: translateY(-400%);
+  -webkit-transition: -webkit-transform 0.35s ease-in-out;
+  transition: -webkit-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
+}
+
+.skip-link:focus {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }

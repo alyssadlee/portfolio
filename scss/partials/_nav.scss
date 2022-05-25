@@ -62,7 +62,8 @@ button[aria-controls="primary-navigation"] {
   }
 }
 
-#primary-navigation[data-visible="true"] {
+#primary-navigation[data-visible="true"],
+#primary-navigation:focus-within {
   transform: translateX(20%);
 }
 
@@ -119,6 +120,7 @@ nav a:hover::after {
 }
 
 .skip-link {
+  position: fixed; 
   transform: translateY(-400%);
   transition: transform 0.35s ease-in-out;
   &:focus {
