@@ -460,30 +460,14 @@ h2 {
   }
 }
 
-.welcome_background {
+.main {
   position: relative;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background: url(../images/welcome_background.jpg) bottom left no-repeat;
-  background-size: cover;
-}
-
-@media (min-width: 50em) {
-  @supports (background-attachment: fixed) {
-    .welcome_background {
-      background-size: cover;
-      min-height: 1000px;
-      background-attachment: fixed;
-    }
-  }
 }
 
 .welcome {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -494,6 +478,18 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: url(../images/welcome_background.jpg) bottom left no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 50em) {
+  @supports (background-attachment: fixed) {
+    .welcome {
+      background-size: cover;
+      min-height: 1000px;
+      background-attachment: fixed;
+    }
+  }
 }
 
 .welcome h1 {
