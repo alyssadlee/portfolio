@@ -1318,6 +1318,9 @@ footer .contact_me::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: #422A2A 1px solid;
   padding-block: 1rem;
   -webkit-box-pack: justify;
@@ -1375,7 +1378,7 @@ button[aria-controls="primary-navigation"] {
       -ms-flex-align: start;
           align-items: flex-start;
   list-style: none;
-  padding-inline: em;
+  padding-inline: 1em;
   padding-block: Min(30vh, 10rem);
   -webkit-transform: translateX(120%);
           transform: translateX(120%);
@@ -1389,7 +1392,7 @@ button[aria-controls="primary-navigation"] {
   #primary-navigation {
     position: initial;
     margin-inline: 1.5rem;
-    padding: 1em 0 0 0;
+    padding: 0.2em 0 0 0;
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-box-orient: horizontal;

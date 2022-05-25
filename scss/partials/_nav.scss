@@ -4,6 +4,7 @@
 
   z-index: 1;
   display: flex;
+  align-items: center;
   border-bottom: $dark 1px solid;
   padding-block: 1rem;
   justify-content: space-between;
@@ -44,7 +45,7 @@ button[aria-controls="primary-navigation"] {
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
-  padding-inline: em;
+  padding-inline: 1em;
   padding-block: Min(30vh, 10rem);
 
   transform: translateX(120%);
@@ -53,7 +54,7 @@ button[aria-controls="primary-navigation"] {
   @media (min-width: 35em) {
     position: initial;
     margin-inline: 1.5rem;
-    padding: 1em 0 0 0;
+    padding: 0.2em 0 0 0;
     box-shadow: none;
     flex-direction: row;
     justify-content: right;
