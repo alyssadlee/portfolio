@@ -1,184 +1,181 @@
 .case-studies {
-    text-align: center;
-    background-color: $dark;
-    padding: 5em 0; 
+  text-align: center;
+  background-color: $dark;
+  padding: 5em 0;
 
-    h1 {
-        @include serif ($fs: 4em, $color: $cream); 
-    }
+  h1 {
+    @include serif($fs: 4em, $color: $cream);
+  }
 }
 
 .casestudy-items {
+  display: flex;
+  flex-direction: column;
+  @include container($max-width: 60rem);
+
+  figcaption {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba($royal-blue, 0.85);
+    color: $cream;
+    text-align: left;
+    padding: 1em;
     display: flex;
     flex-direction: column;
-    @include container ($max-width: 60rem); 
-}
+    transition: top ease-in-out 250ms;
+  }
 
-.casestudy-item {
+  &:hover figcaption,
+  &:focus figcaption {
+    top: 0;
+  }
+
+  &__item {
     position: relative;
     overflow: hidden;
-    flex: 0 1 auto; 
+    flex: 0 1 auto;
     justify-content: space-evenly;
 
-
-    .casestudy-image {
-        display: block;
-        object-fit: cover; 
-        width: 100%;
-        max-height: 100%;
+    &-image {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
 
-    figcaption {
-        position: absolute;
-        top: 100%;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background-color: rgba($royal-blue, 0.85);
-        color: $cream;
-        text-align: left; 
-        padding: 1em;
-        display: flex;
-        flex-direction: column; 
-        transition: top ease-in-out 250ms; 
+    &-title {
+      @include serif($fs: 3em, $color: $cream);
+      margin-bottom: auto;
     }
+    &-desc {
+      // display: none;
 
-    &:hover figcaption,
-    &:focus figcaption {
-        top: 0;
-    }
-}
-
-.casestudy-title {
-    @include serif ($fs: 3em, $color: $cream);
-    margin-bottom: auto;
-}
-
-.casestudy-desc {
-    // display: none;
-    
-    @include mq {
+      @include mq {
         display: none;
+      }
     }
-}
+    &-link {
+      color: $cream;
+      font-weight: $fw-b;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-bottom: 3px solid $cream;
+      align-self: flex-start;
 
-.casestudy-link {
-    color: $cream;
-    font-weight: $fw-b;
-    font-size: 1.1rem; 
-    text-decoration: none;
-    border-bottom: 3px solid $cream;
-    align-self: flex-start; 
-
-    &::after {
+      &::after {
         content: "";
         background-image: url("../images/arrow-icon.svg");
-        background-size: cover; 
+        background-size: cover;
         display: inline-flex;
-        height: 0.5em; 
+        height: 0.5em;
         width: 0.5em;
+      }
     }
+  }
 }
 
-@supports (display:grid) {
-    .casestudy-items {
-        display: grid;
-        grid-gap: 1em; 
-        grid-template-columns: repeat(1, 1fr);
-        
+// .casestudy .casestudy .casestudy
+@supports (display: grid) {
+  .casestudy-items {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
 
-        @include mq {
-            grid-template-columns: repeat(2, 1fr);
-        }
+    @include mq {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .casestudy-item.featured {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .featured {
+    .casestudy-title {
+      font-size: 3em;
     }
 
-    .casestudy-item.featured {
-        grid-column: 1 / span 2; 
-        grid-row: 1 / span 2;
-    } 
-
-    .featured {
-        .casestudy-title {
-            font-size: 3em; 
-        }  
-
-        .casestudy-desc {
-            display: block;
-        }
+    .casestudy-desc {
+      display: block;
     }
+  }
 }
 
 .casestudy-header {
-    text-align: left; 
-    padding: 5em 0; 
-    margin-bottom: 2em; 
+  text-align: left;
+  padding: 5em 0;
+  margin-bottom: 2em;
 }
 
 .casestudy-header:nth-of-type(1) {
-    background-image: url(/images/Tribute_Page.jpg);
-    background-size: cover; 
-    background-position: center;
+  background-image: url(/images/Tribute_Page.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .casestudy-header:nth-of-type(5) {
-    background-image: url(/images/Kaylene_Fam.jpg);
-    background-size: cover;
-    background-position: center;
+  background-image: url(/images/Kaylene_Fam.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .casestudy-title-box {
-    background: rgba($cream, 0.75); 
-    padding: 3em 3em 3em 1em; 
-    color: $dark; 
-    width: 70%; 
+  background: rgba($cream, 0.75);
+  padding: 3em 3em 3em 1em;
+  color: $dark;
+  width: 70%;
 
-    .casestudy-title {
-    font-size: 2.5em; 
+  .casestudy-title {
+    font-size: 2.5em;
     color: $dark;
-    display: inline-block; 
+    display: inline-block;
 
-        &::after {
-            content: "";
-            background-color: $dark-blue;
-            height: 1px;
-            margin: 0.5em 0;   
-            width: 100%; 
-            display: block;
-        }
+    &::after {
+      content: "";
+      background-color: $dark-blue;
+      height: 1px;
+      margin: 0.5em 0;
+      width: 100%;
+      display: block;
     }
+  }
 }
 
 .casestudy-subtitle {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .casestudy-content {
-    text-align: left;
-    width: 85%;
-    margin: 0 auto; 
-    padding-bottom: 2em;
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 2em;
 }
 
 .casestudy-full-width {
-    width: 100vw;
-    max-width: initial;
-    margin: 1em calc(50% - 50vw);
-    height: 20vh;
-    object-fit: cover;
+  width: 100vw;
+  max-width: initial;
+  margin: 1em calc(50% - 50vw);
+  height: 20vh;
+  object-fit: cover;
 }
 
 @include mq {
-    .casestudy-pull-left {
-        width: 65%;
-        float: left; 
-        margin-right: 1em; 
-    }
+  .casestudy-pull-left {
+    width: 65%;
+    float: left;
+    margin-right: 1em;
+  }
 
-    .casestudy-pull-right {
-        width: 65%;
-        float: right; 
-        margin-left: 1em; 
-    }
+  .casestudy-pull-right {
+    width: 65%;
+    float: right;
+    margin-left: 1em;
+  }
 }
 
 // @keyframes modalIn {
