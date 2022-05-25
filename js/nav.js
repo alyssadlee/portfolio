@@ -46,3 +46,13 @@ function UseClickOutside(evt) {
 }
 
 document.addEventListener("mousedown", (evt) => UseClickOutside(evt), true);
+
+function skipToMain() {
+  const container = document.querySelector("main");
+
+  if (container) {
+    container.tabIndex = -1;
+    container.focus();
+    setTimeout(() => container.removeAttribute("tabindex"), 1000);
+  }
+}
