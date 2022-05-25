@@ -1,54 +1,145 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.container {
-    width: calc(min(100% - 1rem, 90rem));
-    margin-inline: auto;
+*:focus,
+*:focus-visible {
+  outline: 0.25rem groove var(--clr-primary-400);
+  outline-offset: 0.25rem;
 }
 
-html, body {
-    height: 100%; 
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+html,
+body,
+#root {
+  height: 100%;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 body {
-    color: $dark; 
-    font-family: $ff-ss;
-    line-height: 1.6;
-    background: $cream; 
-    font-size: .875rem; 
-    overflow-x: hidden; 
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-between;
+  min-height: 100vh;
+}
 
-    @include mq {
-        font-size: 1.125rem; 
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (pointer: coarse) {
+  input,
+  button,
+  textarea,
+  select {
+    min-height: var(--min-tap-target-height);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  width: calc(min(100% - 1rem, 90rem));
+  margin-inline: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: $dark;
+  font-family: $ff-ss;
+  line-height: 1.6;
+  background: $cream;
+  font-size: 0.875rem;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq {
+    font-size: 1.125rem;
+  }
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-
 h1 {
-    @include serif($fs: 2rem);
-    color: $dark; 
-    line-height: 1; 
-    font-size: 3.125rem;
+  @include serif($fs: 2rem);
+  color: $dark;
+  line-height: 1;
+  font-size: 3.125rem;
 
-    @include mq {
-        font-size: 3.5rem;
-    }
+  @include mq {
+    font-size: 3.5rem;
+  }
 }
 
 h2 {
-    @include serif($fs: 2rem);
+  @include serif($fs: 2rem);
 
-    @include mq {
-        font-size: 3rem; 
-    }
+  @include mq {
+    font-size: 3rem;
+  }
 }
-
