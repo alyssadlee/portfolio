@@ -15,10 +15,6 @@ function toggleMenu() {
     primaryNav.setAttribute("data-visible", true);
     navToggle.setAttribute("aria-expanded", true);
     return;
-  } else if (visibility === "true") {
-    primaryNav.setAttribute("data-visible", false);
-    navToggle.setAttribute("data-visible", false);
-    return;
   }
 
   primaryNav.setAttribute("data-visible", false);

@@ -1,0 +1,39 @@
+@mixin align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax_wrapper {
+    perspective: 300px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+  .parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+
+      .parallax_layer {
+      position: absolute;
+      background-color: red;
+      inset: 0;
+      @include align-center
+    }
+  }
+
+}
+
+@mixin parallax_layer {
+  position: absolute;
+  inset: 0;
+  @include align-center;
+}
+
+
+
+
+
+
+

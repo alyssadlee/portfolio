@@ -15,11 +15,10 @@
     <header class="portfolio-header container">
         <h1 class="logo">ALee</h1>
 
-        <button aria-controls="primary-navigation" aria-expanded="false" onclick="toggleMenu()">
-        <span class="sr-only">Menu</span>
-        </button>
-
         <nav>
+            <button aria-controls="primary-navigation" aria-expanded="false" onclick="toggleMenu()">
+                <span class="sr-only">Menu</span>
+                </button>
             <ul id="primary-navigation" data-visible="false">
                 <li><a href="#home" class="navigation_link">Home</a></li>
                 <li><a href="#case-studies" class="navigation_link">Cases</a></li>
@@ -30,21 +29,21 @@
         </nav>
     </header>
 
-    <div class="container-all">
-        <div class="welcome_background"></div>
-        <div class="welcome" id="home">
+    <div class=" parallax_wrapper">
+        <div class="parallax_group">
+        <div class="welcome_background parallax_layer"></div>
+        <div class="welcome parallax_layer" id="home">
             <h1>Alyssa Lee <span>UX Designer</span></h1> 
         </div>
-
-        <section class="intro">
-            <div class="intro_background"></div>
-            <div class="intro_title">
+    </div>
+        <section class="intro parallax_group">
+            <div class="intro_title parallax_layer">
                 <h2>A Speech Therapist turned <a href="#" class="intro-link">UX Designer</a>, passionate about inclusivity in all experiences.</h2>
             </div>
         </section>
 
 
-        <section class="case-studies" id="case-studies">
+        <section class="case-studies parallax_group" id="case-studies">
             <div class="casestudy-items">
 
                 <!-- Portfolio item 1 -->
@@ -79,7 +78,7 @@
 
         </section>
 
-        
+    
 
         <footer>
             <p><a href="#" class="contact_me">Contact me</a></p>
