@@ -753,8 +753,15 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50rem;
+  width: 80%;
   margin: 0 auto;
+}
+
+@media (min-width: 50em) {
+  .case {
+    width: 50rem;
+    margin: 0 auto;
+  }
 }
 
 .case h1 {

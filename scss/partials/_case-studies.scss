@@ -112,8 +112,14 @@
   padding: 0;
   @include align-center;
   flex-direction: column;
-  width: 50rem;
+  width: 80%;
   margin: 0 auto;
+
+  @include mq {
+    width: 50rem;
+    margin: 0 auto;
+  }
+  
 
   h1 {
     margin-top: 3em;
