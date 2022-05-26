@@ -26,9 +26,9 @@
         font-weight: $fw-m; 
         color: $dark;
         line-height: 2;
-        text-align: center;
-        background-color: $cream;
-        border-radius: 0.25em;
+        text-align: center; 
+        // background-color: $cream;
+        // border-radius: 0.25em;
 
         @include mq {
             font-size: 5vw; 

@@ -498,8 +498,6 @@ h2 {
   color: #422A2A;
   line-height: 2;
   text-align: center;
-  background-color: #FDFAF3;
-  border-radius: 0.25em;
 }
 
 @media (min-width: 50em) {
