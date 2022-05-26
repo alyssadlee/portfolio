@@ -99,7 +99,7 @@
 
   .featured {
       .casestudy-title {
-          font-size: 3em; 
+          font-size: 3em;
       }  
 
       .casestudy-desc {
@@ -132,7 +132,7 @@
   }
 
   p {
-    @include sans-serif ($fs: 1.25em, $fw: $fw-l);
+    @include sans-serif ($fs: 1.25em, $fw: $fw-l, $lh: 1.25);
     margin: 1em 0;
   }
 
@@ -144,6 +144,8 @@
 
   & .case-title {
       @include align-center;
+      padding: 3rem 4rem;
+      background: $dark;
     }
 
   & .project_overview {

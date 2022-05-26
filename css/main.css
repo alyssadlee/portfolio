@@ -783,7 +783,7 @@ h2 {
   font-size: 1.25em;
   letter-spacing: 0em;
   color: #422A2A;
-  line-height: 1;
+  line-height: 1.25;
   font-family: "Jost", sans-serif;
   font-weight: 300;
   margin: 1em 0;
@@ -799,6 +799,8 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 3rem 4rem;
+  background: #422A2A;
 }
 
 .case .project_overview {
