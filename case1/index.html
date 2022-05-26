@@ -5,47 +5,128 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <title>Case 1</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Portfolio Case 1</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
-<body>
+<body class="container">
 
      <!-- nav bar -->
-     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#cases">Cases</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#other">Other</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+     <header class="portfolio-header container">
+        <h1 class="logo">ALee</h1>
+        <button class="skip-link" onClick="skipToMain()">Skip to Main Content</button>
+       
+        <nav class="primary-nav">
+            <button aria-controls="primary-navigation" aria-expanded="false" onclick="toggleMenu()">
+                <span class="sr-only">Menu</span>
+                </button>
+            <ul id="primary-navigation" data-visible="false">
+                <li><a href="#home" class="navigation_link">Home</a></li>
+                <li><a href="#case-studies" class="navigation_link">Cases</a></li>
+                <li><a href="#" class="navigation_link">About</a></li>
+                <li><a href="#" class="navigation_link">Other</a></li>
+                <li><a href="#" class="navigation_link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
 <section class="case">
-        <div class="case-all">
-        <div class="case-header">
-            <div class="case-title-box">
-                <h1 class="case-title">Case Name</h1>
-                <p class="case-subtitle">Subtitle goes here</p>
-                <p class="case-role">Role: UX Designer</p>
-            </div>
-        </div> <!-- / portfolio-header -->
-        
-        <div class="case-content">
-            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
-            <img class="case-full-width" src="/images/Tribute_Page.jpg" alt="Tribute Page">
-            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
-            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
-            <img class="case-pull-left" src="/images/Tribute_Page.jpg" alt="Tribute Page">
-            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
-            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
-            <img class="case-pull-right" src="/images/Tribute_Page.jpg" alt="Tribute Page">
-            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
-            <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+    <div class="case_title">
+        <h1>MyAdvisor</h1>
+    </div>
+    <div class="project_overview">
+        <h2>Project overview:</h2>
+        <p>A website that curates an individual’s level of financial literacy and creates a learning plan based on their goals and level on knowledge. 
+        </p>
+    </div>
+
+    <div class="case_roles">
+        <div class="my_role">
+            <h2>My Role</h2>
+            <ul>
+                <li>UX Research</li>
+                <li>User interface design</li>
+                <li>Wireframing</li>
+                <li>Prototyping</li>
+            </ul>
+        </div>
+        <div class="tools">
+            <h2>Tools</h2>
+            <p>Figma</p>
+        </div>
+        <div class="client_duration">
+            <h2>Client & Duration</h2>
+            <p>Avocademy Designathon</p>
+            <p>May 2022</p>
         </div>
     </div>
+        
+    <div class="research">
+        <div class="problem">
+            <h2>So what's the problem?</h2>
+            <p>We discovered that there is a limited amount of educational material for financial literacy that was easy to access and understand. This likely leads to unequal opportunities to invest and save. </p>
+            <p>Our goal was to learn users’ frustrations, needs and goals in regards to financial literacy. Depending on users’ needs, we wanted to create an app/website to provide equitable learning for financial literacy. This would allow users to be more willing to invest in stocks or increase banking as they would have more knowledge. </p>
+        </div>
+        <div class="findings">
+            <h2>What we found:</h2>
+            <img src="../images/stats.jpg" alt="We surveyed 41 users about their level of knowledge in financial literacy, their preferred learning style, and what their learning goals would be. 
+            ">
+        </div>
+        <div class="quotes">
+            <h2>Here's what some of our respondents had to say...</h2>
+            <p>“I think everyone's goals and capabilities are so different that an advisor would be able to help me specifically”</p>
+            <p>“[I like learning through webinars/websites because it’s] easy, accessible, and non-judgemental.”</p>
+        </div>
+
+        <div class="secondary_analysis">
+            <h2>Is there anything else out there?</h2>
+            <p>I conducted secondary analysis to determine if there was a need for a platform for improving financial literacy in the way we were thinking. There were many apps on the market to assist individuals with investing but there was not much in terms of providing individuals with the tools to learn more about financial literacy in general (including topics such as budgeting, how to pay of debts in the best way, etc.).</p>
+        <div class="pain_points">
+            <h2>What needed to be done</h2>
+            <p>We discovered a few wants/pain points for users and came up with these solutions:</p>
+            <img src="../images/Pain_Solution.jpg" alt="Users liked being able to learn at their own pace and preferred learning through websites/webinars:
+            Solution: create a website that users can go through and learn at their own pace
+            Users preferred speaking to a financial advisor 1:1 to help them through investments.
+            Solution: implement an option for users to speak to a financial advisor 1:1 either through a chat box or a video call. 
+            Users found terminology surrounding financial literacy difficult to understand:
+            Solution: Ensure terminology on the website would be friendly for beginners/non-beginners alike.">
+        </div>
+        <div class="quotes">
+            <h2>Here's what some of our respondents had to say...</h2>
+            <p>“I think everyone's goals and capabilities are so different that an advisor would be able to help me specifically”</p>
+            <p>“[I like learning through webinars/websites because it’s] easy, accessible, and non-judgemental.”</p>
+        </div>
+    </div>
+       
+    <div class="results">
+        <div class="rough_drafts">
+            <h2>Rough drafts</h2>
+            <p>We created wireframes and low-fidelity prototypes (shown below) to give us a sense of what exactly the website might look like.</p>
+        </div>
+        <div class="final_product">
+            <h2>The final product (for now)</h2>
+            <p>This is the current flow of the website:</p>
+            <img src="../images/user_flow.jpg" alt="A picture of the user flow">
+            <p>And some screen-shots of the prototype:</p>
+            <img src="../images/create_account_page.jpg" alt="Create an account page">
+            <img src="../images/question_page.jpg" alt="question page">
+            <img src="../images/home_page.jpg" alt="home page">
+            <img src="../images/last_page.jpg" alt="last page of website with option to talk to a financial advisor">
+            <p>As you can see, the website aims to curate the users’ response from the quiz to tailor topics and learning levels. Additionally, we wanted to have the option for users to speak to a financial advisor either using the chat option on the bottom right of the browser or booking a 1:1 session. This could also give banks the opportunity to pair with the website and provide their financial advisors so users could have the option to invest with a bank. </p>
+        </div>
+
 </section>
 
+<footer>
+    <p><a href="#" class="contact_me">Contact me</a></p>
+    <div class="social-icons">
+        <a class="social-icon" href="https://www.instagram.com/alee_uxdesign/"><img src="../images/instagram_icon.png" alt="instagram"></a>
+        <a class="social-icon" href="https://www.facebook.com/alyssadlee/"><img src="../images/facebook_icon.png" alt="facebook"></a>
+        <a class="social-icon" href="https://www.linkedin.com/in/alyssadlee08/"><img src="../images/linkedin_icon.png" alt="linked-in"></a>
+    </div>
+    <p class="copyright">2022 Alyssa Lee. All rights reserved.</p>
+</footer>
+<script src="../js/nav.js" defer></script>
+<script src="../js/modal.js"></script>
 </body>
 </html>

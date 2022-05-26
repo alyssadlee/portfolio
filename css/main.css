@@ -738,77 +738,177 @@ h2 {
   }
 }
 
-.casestudy-header {
-  text-align: left;
-  padding: 5em 0;
-  margin-bottom: 2em;
-}
-
-.casestudy-header:nth-of-type(1) {
-  background-image: url(/images/Tribute_Page.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.casestudy-header:nth-of-type(5) {
-  background-image: url(/images/Kaylene_Fam.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.casestudy-title-box {
-  background: rgba(253, 250, 243, 0.75);
-  padding: 3em 3em 3em 1em;
-  color: #422A2A;
-  width: 70%;
-}
-
-.casestudy-title-box .casestudy-title {
-  font-size: 2.5em;
-  color: #422A2A;
-  display: inline-block;
-}
-
-.casestudy-title-box .casestudy-title::after {
-  content: "";
-  background-color: #2D4A83;
-  height: 1px;
-  margin: 0.5em 0;
-  width: 100%;
-  display: block;
-}
-
-.casestudy-subtitle {
-  font-size: 1rem;
-}
-
-.casestudy-content {
-  text-align: left;
-  width: 85%;
+.case {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50rem;
   margin: 0 auto;
-  padding-bottom: 2em;
 }
 
-.casestudy-full-width {
-  width: 100vw;
-  max-width: initial;
-  margin: 1em calc(50% - 50vw);
-  height: 20vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+.case h1 {
+  margin-top: 3em;
+}
+
+.case h2 {
+  font-size: 2em;
+  letter-spacing: 0em;
+  color: #422A2A;
+  line-height: 1;
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.case p {
+  font-size: 1.25em;
+  letter-spacing: 0em;
+  color: #422A2A;
+  line-height: 1;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  margin: 1em 0;
+}
+
+.case .case-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.case .project_overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1em;
+}
+
+.case .case_roles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 1em;
+  gap: 2em;
+}
+
+.case .case_roles ul {
+  padding-left: 0%;
+}
+
+.case .case_roles h2 {
+  font-size: 1.5em;
+}
+
+.case .case_roles p {
+  font-size: 1em;
 }
 
 @media (min-width: 50em) {
-  .casestudy-pull-left {
-    width: 65%;
-    float: left;
-    margin-right: 1em;
+  .case .case_roles {
+    gap: 6em;
   }
-  .casestudy-pull-right {
-    width: 65%;
-    float: right;
-    margin-left: 1em;
+  .case .case_roles h2 {
+    font-size: 2em;
+    letter-spacing: 0em;
+    color: #422A2A;
+    line-height: 1;
+    font-family: "Bitter", serif;
+    font-weight: 400;
   }
+  .case .case_roles p {
+    font-size: 1.25em;
+    letter-spacing: 0em;
+    color: #422A2A;
+    line-height: 1;
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+  }
+}
+
+.case .research .problem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.case .research .findings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.case .research .quotes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .about-me {
