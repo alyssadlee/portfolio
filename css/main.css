@@ -478,7 +478,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url(../images/welcome_background.jpg) bottom left no-repeat;
+  background: url(../images/welcome.jpg) bottom left no-repeat;
   background-size: cover;
 }
 
@@ -551,7 +551,7 @@ h2 {
   top: 0;
   left: 0;
   height: 100vh;
-  background-image: url(../images/intro_background.jpg);
+  background-image: url(../images/intro.jpg);
   background-size: cover;
 }
 

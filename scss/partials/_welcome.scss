@@ -10,7 +10,7 @@
     display: flex; 
     align-items: center;
     justify-content: center;
-    background: url(../images/welcome_background.jpg) bottom left no-repeat;
+    background: url(../images/welcome.jpg) bottom left no-repeat;
     background-size: cover;
 
     @include mq {
