@@ -1281,6 +1281,8 @@ h2 {
   margin: 0 auto;
   max-width: 50em;
   padding: 7em 0;
+  background: url(../images/welcome.jpg) bottom left no-repeat;
+  background-size: cover;
 }
 
 .contact h1 {

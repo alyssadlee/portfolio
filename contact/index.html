@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page</title>
+    <title>Portfolio Contact Page</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
@@ -23,14 +23,14 @@
                 <li><a href="#case-studies" class="navigation_link">Cases</a></li>
                 <li><a href="#" class="navigation_link">About</a></li>
                 <li><a href="#" class="navigation_link">Other</a></li>
-                <li><a href="#" class="navigation_link">Contact</a></li>
+                <li><a href="https://alyssadlee.github.io/portfolio/contact/" class="navigation_link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="contact" id="contact">
         <h1>Contact me</h1>
-        <form onsubmit="sendEmail(); reset(); return false;">
+        <form method="POST" onsubmit="sendEmail(); reset(); return false;">
             <label class="name">Name:
                 <input type="text" id="name">
             </label>
@@ -48,7 +48,7 @@
     </section>
 
     <footer>
-        <p><a href="#" class="contact_me">Contact me</a></p>
+        <p><a href="https://alyssadlee.github.io/portfolio/contact/" class="contact_me">Contact me</a></p>
         <div class="social-icons">
             <a class="social-icon" href="https://www.instagram.com/alee_uxdesign/"><img src="../images/instagram_icon.png" alt="instagram"></a>
             <a class="social-icon" href="https://www.facebook.com/alyssadlee/"><img src="../images/facebook_icon.png" alt="facebook"></a>
@@ -57,9 +57,11 @@
         <p class="copyright">2022 Alyssa Lee. All rights reserved.</p>
     </footer>
 </div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="../js/nav.js" defer></script>
 <script src="../js/modal.js"></script>
 <script src="../js/form.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </body>
 </html>
