@@ -142,6 +142,11 @@
     margin: 1em 0;
   }
 
+  iframe {
+    width: 100%;
+    overflow: hidden;
+  }
+
   img {
     margin-top: 1em;
     @mixin mq {

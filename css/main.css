@@ -805,6 +805,11 @@ h2 {
   margin: 1em 0;
 }
 
+.case iframe {
+  width: 100%;
+  overflow: hidden;
+}
+
 .case img {
   margin-top: 1em;
 }
