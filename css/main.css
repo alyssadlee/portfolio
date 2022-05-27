@@ -1549,13 +1549,20 @@ nav li {
 }
 
 nav a {
-  font-size: 1.25em;
+  font-size: 1.5em;
   letter-spacing: 0em;
   color: #422A2A;
   line-height: 1.5;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   text-decoration: none;
+  padding: 0.5em 2em 0 0;
+}
+
+@media (min-width: 50em) {
+  nav a {
+    padding: 1em 0 0 0;
+  }
 }
 
 nav a::after {

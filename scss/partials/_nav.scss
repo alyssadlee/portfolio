@@ -76,8 +76,13 @@ nav li {
 }
 
 nav a {
-  @include sans-serif($fs: 1.25em, $lh: 1.5);
+  @include sans-serif($fs: 1.5em, $lh: 1.5);
   text-decoration: none;
+  padding: 0.5em 2em 0 0;
+
+  @include mq {
+    padding: 1em 0 0 0;
+  }
 }
 
 nav a::after {
