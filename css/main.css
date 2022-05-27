@@ -582,7 +582,7 @@ h2 {
   grid-row: 4 / 6;
 }
 
-.intro_title a {
+.intro-link {
   color: #422A2A;
   text-decoration: none;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #422A2A), color-stop(50%, #422A2A));
@@ -594,7 +594,7 @@ h2 {
   background-position: -10000px 1em;
 }
 
-.intro_title a:hover {
+.intro-link:hover {
   background-position: 0 1em;
   -webkit-transition: background-position 2s ease-in-out;
   transition: background-position 2s ease-in-out;

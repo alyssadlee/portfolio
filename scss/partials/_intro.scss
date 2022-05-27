@@ -26,7 +26,10 @@
 
     }
 
-    a {
+    
+}
+
+.intro-link {
         color: $dark;
         text-decoration: none;
         background-image: linear-gradient($dark 50%, $dark 50%);
@@ -40,7 +43,7 @@
                 background-position: 0 1em;
                 transition: background-position 2s ease-in-out;
             }
-        }
+        
 }
     
     
