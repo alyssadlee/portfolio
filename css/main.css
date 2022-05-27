@@ -851,6 +851,9 @@ h2 {
 @media (min-width: 50em) {
   .case .case_roles {
     gap: 6em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .case .case_roles h2 {
     font-size: 2em;

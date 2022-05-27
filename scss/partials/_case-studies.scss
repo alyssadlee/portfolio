@@ -176,6 +176,7 @@
     
     @include mq {
       gap: 6em;
+      align-items: flex-start;
 
       h2 {
         @include serif ($fs: 2em);
