@@ -6,7 +6,7 @@
  }
 
  .about-img {
-     max-height: 20em;
+     max-height: 15em;
      border-radius: 5%;
      @media (min-width: 42em) {
          float: left;
@@ -16,7 +16,7 @@
 
  .about-title {
     margin-bottom: 0.1em; 
-    background-color: rgba($dark, 0.8);
+    background-color: rgba($dark-blue, 0.8);
     width: 100%; 
     padding: 0 0.2em;
     color: $cream;
@@ -24,7 +24,7 @@
     font-size: 3em;
 
     @include mq {
-        font-size: 4.25em; 
+        font-size: 3em; 
     }
  }
 
@@ -35,7 +35,7 @@
  @supports (display: grid) {
      .about-me {
         display: grid; 
-        grid-template-columns: [port-start] minmax(3em, 1fr)  minmax(3em, 1fr) [name-start] minmax(3em, 1fr) [img-end] minmax(3em, 1fr) 2fr [port-end]; 
+        grid-template-columns: [port-start] minmax(3em, 1fr) minmax(3em, 1fr) [name-start] minmax(3em, 1fr) [img-end] minmax(3em, 1fr) 2fr [port-end]; 
         grid-column-gap: 1.5em; 
      }
 
@@ -59,7 +59,7 @@
         grid-column: port / port; 
 
         @include mq {
-            grid-column: img-end / port; 
+            grid-column: name-start / port; 
         }
     }
 
