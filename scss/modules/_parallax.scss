@@ -17,19 +17,18 @@
 
       .parallax_layer {
       position: absolute;
-      background-color: red;
       inset: 0;
-      @include align-center
+      background-color: red;
     }
   }
 
 }
 
-@mixin parallax_layer {
-  position: absolute;
-  inset: 0;
-  @include align-center;
-}
+// @mixin parallax_layer {
+//   position: absolute;
+//   inset: 0;
+//   @include align-center;
+// }
 
 
 

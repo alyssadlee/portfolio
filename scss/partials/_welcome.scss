@@ -8,10 +8,16 @@
 }
 
 .welcome {
-    top: 0;
-    left: 0;
-    height: 100vh; 
-    transform: translateZ(0);
+    // top: 0;
+    // left: 0;
+    // height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+      inset: 0;
+      background-color: red;
+      transform: translateZ(0);
 
     h1 {
         font-size: 3rem;
