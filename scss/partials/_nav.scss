@@ -16,7 +16,8 @@ button[aria-controls="primary-navigation"] {
   position: fixed;
   right: 2em;
   z-index: 2;
-  background: $blue;
+  background-image: url("../images/menu_icon.png");
+  background-size: contain;
   border: 0;
   border-radius: 0.25em;
   width: 2rem;
