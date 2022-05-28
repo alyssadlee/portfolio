@@ -1,7 +1,13 @@
+// #footer {
+//     z-index: -1;
+// }
+
 footer {
     background: $grey-beige;
     padding: 5em 0;
     text-align: center;
+    transform: translate(0);
+
 
     .contact_me {
         @include serif($fs: 2.8em);
@@ -43,8 +49,4 @@ footer {
     width: 25%;
     height: 25%; 
 
-}
-
-.copyright {
-    
 }

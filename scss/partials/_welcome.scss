@@ -1,10 +1,14 @@
+// #home {
+//     z-index: 0;
+// }
+
 .welcome_background {
     top: 0;
     left: 0;
     height: 100vh; 
     background: url(../images/welcome_background.jpg) bottom left no-repeat;
     background-size: cover;
-    transform: translateZ(-300px) scale(1);
+    transform: translateZ(-300px) scale(2);
 }
 
 .welcome {
@@ -14,10 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-      inset: 0;
-      background-color: red;
-      transform: translateZ(0);
+    transform: translateZ(0);
 
     h1 {
         font-size: 3rem;
