@@ -1,3 +1,13 @@
+.contact_body {
+    background: url(../images/colour_background.jpg);
+    background-size: cover;
+}
+
+.contact_form_body {
+    background-color: $cream-transparent;
+    padding: 2em;
+    border-radius: 2em;
+}
 .contact {
     @include container;
     padding: 7em 0; 
