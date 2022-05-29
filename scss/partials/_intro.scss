@@ -1,16 +1,24 @@
 // #intro {
 //     z-index: 5;
 // }
+.intro_background {
+    background: url(../images/intro_background.jpg) top right no-repeat;
+    background-size: cover;
+    transform: translateZ(0);
+}
 
 .intro_title {
     color: $dark;
     text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 60%;
     margin: 0 auto;
-    padding: 3em; 
-    background-color: rgba(253, 250, 243, 0.9);
+    padding: 2em; 
+    background-color: rgba(253, 250, 243, 0.85);
     border-radius: 2em;
-    transform: translateZ(210px) scale(calc (1 + ((210px * -1) / 300)));
+    transform: translateZ(150px) scale(0.5);
 
     h2 {
         @include serif($fs:2.5em, $lh:1.5); 

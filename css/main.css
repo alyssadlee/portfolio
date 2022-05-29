@@ -472,16 +472,32 @@ h2 {
   margin: 2em auto 0;
 }
 
+.intro_background {
+  background: url(../images/intro_background.jpg) top right no-repeat;
+  background-size: cover;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
 .intro_title {
   color: #422A2A;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 60%;
   margin: 0 auto;
-  padding: 3em;
-  background-color: rgba(253, 250, 243, 0.9);
+  padding: 2em;
+  background-color: rgba(253, 250, 243, 0.85);
   border-radius: 2em;
-  -webkit-transform: translateZ(210px) scale(calc 0.3px);
-          transform: translateZ(210px) scale(calc 0.3px);
+  -webkit-transform: translateZ(150px) scale(0.5);
+          transform: translateZ(150px) scale(0.5);
 }
 
 .intro_title h2 {
@@ -517,7 +533,7 @@ h2 {
 .case-studies {
   text-align: center;
   padding: 5em 0;
-  height: 100%;
+  background-color: #422A2A;
 }
 
 .case-studies h1 {
@@ -527,14 +543,6 @@ h2 {
   line-height: 1;
   font-family: "Bitter", serif;
   font-weight: 400;
-}
-
-.casestudy_background {
-  background: url(../images/intro_background.jpg);
-  background-size: cover;
-  -webkit-transform: translateZ(-300px) scale(2);
-          transform: translateZ(-300px) scale(2);
-  z-index: -1;
 }
 
 .casestudy-items {
@@ -548,8 +556,6 @@ h2 {
   width: 90%;
   margin: 0 auto;
   max-width: 60rem;
-  -webkit-transform: translate(0);
-          transform: translate(0);
 }
 
 .casestudy-item {
@@ -1184,8 +1190,6 @@ footer {
   background: #D2CCBC;
   padding: 5em 0;
   text-align: center;
-  -webkit-transform: translate(0);
-          transform: translate(0);
 }
 
 footer .contact_me {

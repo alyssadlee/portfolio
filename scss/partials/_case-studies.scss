@@ -1,29 +1,18 @@
-// #case-studies {
-//     z-index: 10;
-// }
-
 .case-studies {
     text-align: center;
     padding: 5em 0; 
-    height: 100%;
+    background-color: $dark;
 
     h1 {
         @include serif ($fs: 4em, $color: $cream); 
     }
 }
 
-.casestudy_background {
-    background: url(../images/intro_background.jpg);
-    background-size: cover;
-    transform: translateZ(-300px) scale(2);
-    z-index: -1;
-}
-
 .casestudy-items {
     display: flex;
     flex-direction: column;
+    
     @include container ($max-width: 60rem); 
-    transform: translate(0);
 }
 
 .casestudy-item {
