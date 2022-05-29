@@ -30,18 +30,25 @@
         </nav>
     </header>
 
-    <div class="container-all">
+       
 
-        <main>
-            <div class="welcome" id="home">
-                <h1><a href="https://alyssadlee.github.io/portfolio/about/" class="intro-link">Alyssa Lee </a><span>UX Designer</span></h1>
+        <div class="parallax_wrapper">
+        
+            <div class="parallax_group" id="home">
+                <div class="welcome_background parallax_layer"></div>
+                <div class="welcome parallax_layer">
+                    <h1><a href="https://alyssadlee.github.io/portfolio/about/">Alyssa Lee</a> <span>UX Designer</span></h1>
+                </div>
             </div>
-            <section class="intro">
-                <div class="intro_background"></div>
-                <div class="intro_title">
+
+            <section class="intro parallax_group">
+                <div class="intro_background parallax_layer"></div>
+                <div class="intro_title parallax_layer">
                     <h2>A Speech Therapist turned <a href="#case-studies" class="intro-link">UX Designer</a>, passionate about inclusivity in all experiences.</h2>
                 </div>
             </section>
+
+            <div class="parallax_group">
             <section class="case-studies" id="case-studies">
                 <div class="casestudy-items">
                     <!-- Portfolio item 1 -->
@@ -72,9 +79,9 @@
                         </figcaption>
                     </figure> -->
             </section>
-        </main>
-
         
+    
+    
 
         <footer>
             <p><a href="https://alyssadlee.github.io/portfolio/contact/" class="contact_me">Contact me</a></p>
@@ -85,7 +92,9 @@
             </div>
             <p class="copyright">2022 Alyssa Lee. All rights reserved.</p>
         </footer>
+   </div>
     </div>
+    
     <script src="js/nav.js" defer></script>
     <script src="js/modal.js"></script>
 </body>

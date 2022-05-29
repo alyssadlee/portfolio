@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap");
+.parallax_wrapper {
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax_wrapper .parallax_group {
+  position: relative;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.parallax_wrapper .parallax_group .parallax_layer {
+  position: absolute;
+  inset: 0;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -460,15 +480,17 @@ h2 {
   }
 }
 
-.main {
-  position: relative;
-}
-
-.welcome {
-  position: relative;
+.welcome_background {
   top: 0;
   left: 0;
   height: 100vh;
+  background: url(../images/welcome.jpg) bottom left no-repeat;
+  background-size: cover;
+  -webkit-transform: translateZ(-100px) scale(1.33);
+          transform: translateZ(-100px) scale(1.33);
+}
+
+.welcome {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -478,18 +500,8 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url(../images/welcome.jpg) bottom left no-repeat;
-  background-size: cover;
-}
-
-@media (min-width: 50em) {
-  @supports (background-attachment: fixed) {
-    .welcome {
-      background-size: cover;
-      min-height: 1000px;
-      background-attachment: fixed;
-    }
-  }
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .welcome h1 {
@@ -542,28 +554,33 @@ h2 {
   margin: 2em auto 0;
 }
 
+.intro_background {
+  background: url(../images/intro.jpg) top right no-repeat;
+  background-size: cover;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
 .intro_title {
   color: #422A2A;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background-image: url(../images/intro.jpg);
-  background-size: cover;
-}
-
-@supports (display: grid) {
-  .intro_title {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: [port-start] minmax(3em, 1fr) [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr);
-        grid-template-columns: [port-start] minmax(3em, 1fr) [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr);
-    -ms-grid-rows: [port-start] minmax(3em, 1fr) minmax 3em, 1fr minmax 3em, 1fr [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr) 3em, 1fr;
-        grid-template-rows: [port-start] minmax(3em, 1fr) minmax 3em, 1fr minmax 3em, 1fr [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr) 3em, 1fr;
-  }
+  height: 75%;
+  width: 60%;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: rgba(253, 250, 243, 0.85);
+  border-radius: 2em;
+  -webkit-transform: translateZ(100px) scale(0.6);
+          transform: translateZ(100px) scale(0.6);
 }
 
 .intro_title h2 {
@@ -576,10 +593,6 @@ h2 {
   font-weight: 400;
   top: 0;
   left: 0;
-  grid-column: text-start / text-end;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 2;
-  grid-row: 4 / 6;
 }
 
 .intro-link {
@@ -602,6 +615,7 @@ h2 {
 
 .case-studies {
   text-align: center;
+  background-color: #422A2A;
   padding: 5em 0;
 }
 
@@ -743,12 +757,12 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   background-color: #422A2A;
 }
@@ -763,12 +777,12 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -818,12 +832,12 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -890,12 +904,12 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -906,12 +920,12 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -922,12 +936,12 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

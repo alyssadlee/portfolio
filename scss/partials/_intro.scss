@@ -1,18 +1,22 @@
+.intro_background {
+    background: url(../images/intro.jpg) top right no-repeat;
+    background-size: cover;
+    transform: translateZ(0);
+}
+
 .intro_title {
     color: $dark;
     text-align: left;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background-image: url(../images/intro.jpg);
-    background-size: cover;
-    
-    @supports (display: grid) {
-            display: grid;
-            grid-template-columns: [port-start] minmax(3em, 1fr) [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr);
-            grid-template-rows: [port-start] minmax(3em, 1fr) minmax (3em, 1fr) minmax (3em, 1fr) [text-start] minmax(6em, 2fr) [text-end] minmax(3em, 1fr) (3em, 1fr);
-        }
+    height: 75%;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2em; 
+    background-color: rgba(253, 250, 243, 0.85);
+    border-radius: 2em;
+    transform: translateZ(100px) scale(0.6);
 
     h2 {
         @include serif($fs:2.5em, $lh:1.5); 
@@ -20,10 +24,6 @@
         // padding-inline: Max(20%, 2.5em);
         top: 0;
         left: 0;
-        grid-column: text-start / text-end;
-        grid-row: 4 / 6; 
-        
-
     }
 
     

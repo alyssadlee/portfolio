@@ -1,25 +1,21 @@
-.main {
-    position: relative;
-}
+// .main {
+//     position: relative;
+// }
 
-.welcome {
-    position: relative; 
+.welcome_background {
     top: 0;
     left: 0;
     height: 100vh; 
+    background: url(../images/welcome.jpg) bottom left no-repeat;
+    background-size: cover;
+    transform: translateZ(-100px) scale(1.33);
+}
+
+.welcome {
     display: flex; 
     align-items: center;
     justify-content: center;
-    background: url(../images/welcome.jpg) bottom left no-repeat;
-    background-size: cover;
-
-    @include mq {
-        @supports (background-attachment: fixed) {
-        background-size: cover;
-        min-height: 1000px;
-        background-attachment: fixed;
-        }
-    }
+    transform: translateZ(0);
 
     h1 {
         font-size: 3rem;
