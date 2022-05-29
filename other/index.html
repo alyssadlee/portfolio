@@ -4,78 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Other</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Portfolio Other</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
 
 <!-- nav bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#cases">Cases</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#other">Other</a></li>
-            <li><a href="#contact">Contact</a></li>
+<header class="portfolio-header container">
+    <h1 class="logo">ALee</h1>
+    <button class="skip-link" onClick="skipToMain()">Skip to Main Content</button>
+   
+    <nav class="primary-nav">
+        <button aria-controls="primary-navigation" aria-expanded="false" onclick="toggleMenu()">
+            <span class="sr-only">Menu</span>
+            </button>
+        <ul id="primary-navigation" data-visible="false">
+            <li><a href="https://alyssadlee.github.io/portfolio/" class="navigation_link">Home</a></li>
+            <li><a href="https://alyssadlee.github.io/portfolio/" class="navigation_link">Portfolio</a></li>
+            <li><a href="https://alyssadlee.github.io/portfolio/about/" class="navigation_link">About</a></li>
+            <li><a href="#" class="navigation_link">Other</a></li>
+            <li><a href="https://alyssadlee.github.io/portfolio/contact/" class="navigation_link">Contact</a></li>
         </ul>
     </nav>
+</header>
 
-    <section class="portfolio" id="portfolio">
-        <h1>Artwork</h1> 
+<section class="heading">
+    <div class="title">
+        <h1>Artwork</h1>
+        <p>I also like to illustrate...</p>
+    </div>
+</section>    
+
+<section class="portfolio" id="portfolio">
         <div class="portfolio-items">
 
             <!-- Portfolio item 1 -->
             <figure class="portfolio-item">
-                <img class="portfolio-image" src="images/Tribute_Page.jpg" alt="Yayoi Kusama tribute page">
+                <img class="portfolio-image" src="../images/Karyn_and_Aaron.jpg" alt="Drawing of the artist's sister and her husband.">
                 <figcaption>
-                    <h2 class="portfolio-title">Project Name</h2>
-                    <p class="portfolio-desc">Short description of project</p>
-                    <a href="#" class="portfolio-link">More info</a>
+                    <h2 class="portfolio-title">Drawing for my sis</h2>
+                    <p class="portfolio-desc">This was a gift for my sis to celebrate a special time in her life.</p>
+                    <!-- <a href="#" class="portfolio-link">More info</a> -->
                 </figcaption>
             </figure>
 
             <!-- Portfolio item 2 -->
             <figure class="portfolio-item">
-                <img class="portfolio-image" src="images/green_flowers.JPG" alt="drawing of green flowers">
+                <img class="portfolio-image" src="../images/Ngng_.jpg" alt="Drawing of the artist's grandma">
                 <figcaption>
-                    <h2 class="portfolio-title">Project Name</h2>
-                    <p class="portfolio-desc">Short description of project</p>
-                    <a href="#" class="portfolio-link">More info</a>
+                    <h2 class="portfolio-title">Eng Eng</h2>
+                    <p class="portfolio-desc">"Eng Eng" is the best way I could convey what we called my grandma on my dad's side. She was an excellent cook.</p>
+                    <!-- <a href="#" class="portfolio-link">More info</a> -->
                 </figcaption>
             </figure>
 
             <!-- Portfolio item 3 -->
             <figure class="portfolio-item">
-                <img class="portfolio-image" src="images/Survey_Form.jpg" alt="Survey form">
+                <img class="portfolio-image" src="../images/Popo_.jpg" alt="Drawing of the artist's grandma on mom's side">
                 <figcaption>
-                    <h2 class="portfolio-title">Project Name</h2>
-                    <p class="portfolio-desc">Short description of project</p>
-                    <a href="#" class="portfolio-link">More info</a>
+                    <h2 class="portfolio-title">Popo</h2>
+                    <p class="portfolio-desc">"Popo" is what we call our grandma on our mom's side in Chinese. She's an artist as well - maybe that's where I got my skills from!</p>
+                    <!-- <a href="#" class="portfolio-link">More info</a> -->
                 </figcaption>
             </figure>
 
             <!-- Portfolio item 4 -->
             <figure class="portfolio-item">
-                <img class="portfolio-image" src="images/Technical_Doc_Page.jpg" alt="technical documentation page">
+                <img class="portfolio-image" src="../images/Raptors.jpg" alt="drawing of Kawhi and the raptors">
                 <figcaption>
-                    <h2 class="portfolio-title">Project Name</h2>
-                    <p class="portfolio-desc">Short description of project</p>
-                    <a href="#" class="portfolio-link">More info</a>
+                    <h2 class="portfolio-title">The Raptors</h2>
+                    <p class="portfolio-desc">This was drawn to celebrate the series winner.</p>
+                    <!-- <a href="#" class="portfolio-link">More info</a> -->
                 </figcaption>
             </figure>
 
             <!-- Portfolio item 5 -->
             <figure class="portfolio-item featured">
-                <img class="portfolio-image" src="/images/Kaylene_Fam.jpg" alt="drawing of a girl sitting at a table, a boy in the middleTribute Page.">
+                <img class="portfolio-image" src="/images/Kaylene_Fam.jpg" alt="drawing of the artist's sis-in-law, nephew, and husband">
                 <figcaption>
-                    <h2 class="portfolio-title">Project Name</h2>
-                    <p class="portfolio-desc">Short description of project</p>
-                    <a href="#" class="portfolio-link">More info</a>
+                    <h2 class="portfolio-title">Candid fam</h2>
+                    <p class="portfolio-desc">Just another day with the Chan fam...</p>
+                    <!-- <a href="#" class="portfolio-link">More info</a> -->
                 </figcaption>
             </figure>
         </div>
     </section>
 
+    <footer>
+        <p><a href="https://alyssadlee.github.io/portfolio/contact/" class="contact_me">Contact me</a></p>
+        <div class="social-icons">
+            <a class="social-icon" href="https://www.instagram.com/alee_uxdesign/"><img src="../images/instagram_icon.png" alt="instagram"></a>
+            <a class="social-icon" href="https://www.facebook.com/alyssadlee/"><img src="../images/facebook_icon.png" alt="facebook"></a>
+            <a class="social-icon" href="https://www.linkedin.com/in/alyssadlee08/"><img src="../images/linkedin_icon.png" alt="linked-in"></a>
+        </div>
+        <p class="copyright">2022 Alyssa Lee. All rights reserved.</p>
+    </footer>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/modal.js"></script>
 </body>
 </html>

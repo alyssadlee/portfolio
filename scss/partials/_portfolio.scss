@@ -1,6 +1,5 @@
 .portfolio {
     text-align: center;
-    background-color: $dark;
     padding: 5em 0; 
 
     h1 {
@@ -50,16 +49,16 @@
 }
 
 .portfolio-title {
-    @include serif ($fs: 1.5em);
+    @include serif ($fs: 1.5em, $color: $cream);
     margin-bottom: auto;
 }
 
 .portfolio-desc {
     // display: none;
     
-    @include mq {
-        display: none;
-    }
+    // @include mq {
+    //     display: none;
+    // }
 }
 
 .portfolio-link {
@@ -114,79 +113,6 @@
     margin-bottom: 2em; 
 }
 
-.portfolio-header:nth-of-type(1) {
-    background-image: url(/images/Tribute_Page.jpg);
-    background-size: cover; 
-    background-position: center;
-}
 
-.portfolio-header:nth-of-type(5) {
-    background-image: url(/images/Kaylene_Fam.jpg);
-    background-size: cover;
-    background-position: center;
-}
 
-.portfolio-title-box {
-    background: rgba($cream, 0.75); 
-    padding: 3em 3em 3em 1em; 
-    color: $dark; 
-    width: 70%; 
 
-    .portfolio-title {
-    font-size: 2.5em; 
-    color: $dark;
-    display: inline-block; 
-
-        &::after {
-            content: "";
-            background-color: $dark-blue;
-            height: 1px;
-            margin: 0.5em 0;   
-            width: 100%; 
-            display: block;
-        }
-    }
-}
-
-.portfolio-subtitle {
-    font-size: 1rem;
-}
-
-.portfolio-content {
-    text-align: left;
-    width: 85%;
-    margin: 0 auto; 
-    padding-bottom: 2em;
-}
-
-.portfolio-full-width {
-    width: 100vw;
-    max-width: initial;
-    margin: 1em calc(50% - 50vw);
-    height: 20vh;
-    object-fit: cover;
-}
-
-@include mq {
-    .portfolio-pull-left {
-        width: 65%;
-        float: left; 
-        margin-right: 1em; 
-    }
-
-    .portfolio-pull-right {
-        width: 65%;
-        float: right; 
-        margin-left: 1em; 
-    }
-}
-
-@keyframes modalIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes modalOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
