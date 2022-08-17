@@ -1,0 +1,61 @@
+// .main {
+//     position: relative;
+// }
+
+.welcome_background {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  // url path is from the perspective of the "css" folder not this sass file
+  background: url(../assets/images/welcome.jpg) bottom left no-repeat;
+  background-size: cover;
+  transform: translateZ(-100px) scale(1.33);
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(0);
+
+  h1 {
+    font-size: 3rem;
+    font-weight: $fw-m;
+    color: $dark;
+    line-height: 2;
+    padding: 0.5em;
+    text-align: center;
+    background-color: rgba(253, 250, 243, 0.85);
+    border-radius: 0.4em;
+
+    @include mq {
+      font-size: 5vw;
+    }
+
+    span {
+      @include serif($fs: 1.5rem);
+      display: block;
+
+      &::before {
+        content: ' ';
+        display: block;
+        width: 50%;
+        margin: 0 auto 1em;
+        height: 2px;
+        background: $royal-blue;
+      }
+
+      @include mq {
+        font-size: 2.5vw;
+      }
+    }
+
+    &::before {
+      margin: 0 auto 2em;
+    }
+
+    &::after {
+      margin: 2em auto 0;
+    }
+  }
+}

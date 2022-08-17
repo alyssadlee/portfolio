@@ -1,101 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Home</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
- 
-<body class="container">
+    <link rel="stylesheet" href="src/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
 
+  <body class="container">
     <header class="portfolio-header container">
-        <h1 class="logo">ALee</h1>
-        <button class="skip-link" onClick="skipToMain()">Skip to Main Content</button>
-       
-        <nav class="primary-nav">
-            <button aria-controls="primary-navigation" aria-expanded="false" onclick="toggleMenu()">
-                <span class="sr-only">Menu</span>
-                </button>
-            <ul id="primary-navigation" data-visible="false">
-                <li><a href="#home" class="navigation_link">Home</a></li>
-                <li><a href="#case-studies" class="navigation_link">Portfolio</a></li>
-                <li><a href="https://alyssadlee.github.io/portfolio/about/" class="navigation_link">About</a></li>
-                <li><a href="https://alyssadlee.github.io/portfolio/other/" class="navigation_link">Other</a></li>
-                <li><a href="https://alyssadlee.github.io/portfolio/contact/" class="navigation_link">Contact</a></li>
-            </ul>
-        </nav>
+      <h1 class="logo">ALee</h1>
+      <button class="skip-link" onClick="skipToMain()">
+        Skip to Main Content
+      </button>
+
+      <nav class="primary-nav">
+        <button
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          onclick="toggleMenu()"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="primary-navigation" data-visible="false">
+          <li><a href="#home" class="navigation_link">Home</a></li>
+          <li><a href="#case-studies" class="navigation_link">Portfolio</a></li>
+          <li>
+            <a
+              href="https://alyssadlee.github.io/portfolio/about/"
+              class="navigation_link"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://alyssadlee.github.io/portfolio/other/"
+              class="navigation_link"
+              >Other</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://alyssadlee.github.io/portfolio/contact/"
+              class="navigation_link"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
-       
+    <div class="parallax_wrapper">
+      <div class="parallax_group" id="home">
+        <div class="welcome_background parallax_layer"></div>
+        <div class="welcome parallax_layer">
+          <h1>
+            <a href="https://alyssadlee.github.io/portfolio/about/"
+              >Alyssa Lee</a
+            >
+            <span>UX Designer</span>
+          </h1>
+        </div>
+      </div>
 
-        <div class="parallax_wrapper">
-        
-            <div class="parallax_group" id="home">
-                <div class="welcome_background parallax_layer"></div>
-                <div class="welcome parallax_layer">
-                    <h1><a href="https://alyssadlee.github.io/portfolio/about/">Alyssa Lee</a> <span>UX Designer</span></h1>
-                </div>
-            </div>
+      <section class="intro parallax_group">
+        <div class="intro_background parallax_layer"></div>
+        <div class="intro_title parallax_layer">
+          <h2>
+            A Speech Therapist turned
+            <a href="#case-studies" class="intro-link">UX Designer</a>,
+            passionate about inclusivity in all experiences.
+          </h2>
+        </div>
+      </section>
 
-            <section class="intro parallax_group">
-                <div class="intro_background parallax_layer"></div>
-                <div class="intro_title parallax_layer">
-                    <h2>A Speech Therapist turned <a href="#case-studies" class="intro-link">UX Designer</a>, passionate about inclusivity in all experiences.</h2>
-                </div>
-            </section>
-
-            <div class="parallax_group">
-            <section class="case-studies" id="case-studies">
-                <div class="casestudy-items">
-                    <!-- Portfolio item 1 -->
-                    <figure class="casestudy-item">
-                        <img class="casestudy-image" src="images/case1/Hero_image.jpg" alt="Yayoi Kusama tribute page">
-                        <figcaption>
-                            <h2 class="casestudy-title">MyAdvisor</h2>
-                            <p class="casestudy-desc">The website made to make learning about finances more equitable.</p>
-                            <a href="https://alyssadlee.github.io/portfolio/case1/" class="casestudy-link">Click here for more information</a>
-                        </figcaption>
-                    </figure>
-                    <!-- Portfolio item 2 -->
-                    <figure class="casestudy-item">
-                        <img class="casestudy-image" src="images/green_flowers.JPG" alt="Yayoi Kusama tribute page">
-                        <figcaption>
-                            <h2 class="casestudy-title">App for people with aphasia.</h2>
-                            <p class="casestudy-desc">In progress...</p>
-                            <a href="#" class="casestudy-link"></a>
-                        </figcaption>
-                    </figure>
-                    <!-- Portfolio item 3 -->
-                    <!-- <figure class="casestudy-item">
-                        <img class="casestudy-image" src="images/green_flowers.JPG" alt="Yayoi Kusama tribute page">
+      <div class="parallax_group">
+        <section class="case-studies" id="case-studies">
+          <div class="casestudy-items">
+            <!-- Portfolio item 1 -->
+            <figure class="casestudy-item">
+              <img
+                class="casestudy-image"
+                src="src/assets/case1/Hero_image.jpg"
+                alt="Yayoi Kusama tribute page"
+              />
+              <figcaption>
+                <h2 class="casestudy-title">MyAdvisor</h2>
+                <p class="casestudy-desc">
+                  The website made to make learning about finances more
+                  equitable.
+                </p>
+                <a
+                  href="https://alyssadlee.github.io/portfolio/case1/"
+                  class="casestudy-link"
+                  >Click here for more information</a
+                >
+              </figcaption>
+            </figure>
+            <!-- Portfolio item 2 -->
+            <figure class="casestudy-item">
+              <img
+                class="casestudy-image"
+                src="src/assets/images/green_flowers.JPG"
+                alt="Yayoi Kusama tribute page"
+              />
+              <figcaption>
+                <h2 class="casestudy-title">App for people with aphasia.</h2>
+                <p class="casestudy-desc">In progress...</p>
+                <a href="#" class="casestudy-link"></a>
+              </figcaption>
+            </figure>
+            <!-- Portfolio item 3 -->
+            <!-- <figure class="casestudy-item">
+                        <img class="casestudy-image" src="src/assets/images/green_flowers.JPG" alt="Yayoi Kusama tribute page">
                         <figcaption>
                             <h2 class="casestudy-title">Project Name</h2>
                             <p class="casestudy-desc">Short description of project</p>
                             <a href="#" class="casestudy-link">More info</a>
                         </figcaption>
                     </figure> -->
-            </section>
-        
-    
-    
+          </div>
+        </section>
 
         <footer>
-            <p><a href="https://alyssadlee.github.io/portfolio/contact/" class="contact_me">Contact me</a></p>
-            <div class="social-icons">
-                <a class="social-icon" href="https://www.instagram.com/alee_uxdesign/"><img src="images/instagram_icon.png" alt="instagram"></a>
-                <a class="social-icon" href="https://www.facebook.com/alyssadlee/"><img src="images/facebook_icon.png" alt="facebook"></a>
-                <a class="social-icon" href="https://www.linkedin.com/in/alyssadlee08/"><img src="images/linkedin_icon.png" alt="linked-in"></a>
-            </div>
-            <p class="copyright">2022 Alyssa Lee. All rights reserved.</p>
+          <p>
+            <a
+              href="https://alyssadlee.github.io/portfolio/contact/"
+              class="contact_me"
+              >Contact me</a
+            >
+          </p>
+          <div class="social-icons">
+            <a
+              class="social-icon"
+              href="https://www.instagram.com/alee_uxdesign/"
+              ><img src="src/assets/icons/instagram_icon.png" alt="instagram"
+            /></a>
+            <a class="social-icon" href="https://www.facebook.com/alyssadlee/"
+              ><img src="src/assets/icons/facebook_icon.png" alt="facebook"
+            /></a>
+            <a
+              class="social-icon"
+              href="https://www.linkedin.com/in/alyssadlee08/"
+              ><img src="src/assets/icons/linkedin_icon.png" alt="linked-in"
+            /></a>
+          </div>
+          <p class="copyright">2022 Alyssa Lee. All rights reserved.</p>
         </footer>
-   </div>
+      </div>
     </div>
-    
-    <script src="js/nav.js" defer></script>
-    <script src="js/modal.js"></script>
-</body>
+
+    <script src="src/js/nav.js" defer></script>
+    <script src="src/js/modal.js"></script>
+  </body>
 </html>
